@@ -13,7 +13,9 @@ hugoblox:
   # ────────────────────────────────────────────────────────────────────────────
   identity:
     # Site name - shown in navbar, footer, copyright, and browser title by default
-    name: "Your Name"
+    name: "@ DGIST"
+    # Logo image path (absolute path from site root)
+    logo: "media/logo.png"
     # Legal entity for copyright notices (defaults to name if not set)
     organization: ""
     # Schema.org type for structured data
@@ -82,6 +84,8 @@ hugoblox:
   # ────────────────────────────────────────────────────────────────────────────
   header:
     enable: true
+    # Logo image path (absolute path from site root)
+    logo: "media/logo.png"
     # Header style variant
     style: navbar                       # navbar | navbar-simple | minimal
     # Stick to top on scroll

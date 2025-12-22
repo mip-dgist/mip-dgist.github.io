@@ -1,0 +1,36 @@
+/* Override Hugo Blox container width for People page */
+#pi .container,
+#pi .prose,
+#postdoc .container,
+#postdoc .prose,
+#phd-students .container,
+#phd-students .prose,
+#master-students .container,
+#master-students .prose,
+#interns .container,
+#interns .prose {
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+/* Override any nested containers */
+#pi .container > *,
+#postdoc .container > *,
+#phd-students .container > *,
+#master-students .container > *,
+#interns .container > * {
+  max-width: 100% !important;
+}
+
+/* Target Hugo Blox markdown block containers */
+section[id="pi"] .container,
+section[id="postdoc"] .container,
+section[id="phd-students"] .container,
+section[id="master-students"] .container,
+section[id="interns"] .container {
+  max-width: 100% !important;
+  width: 100% !important;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+

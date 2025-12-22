@@ -1,0 +1,28 @@
+# schema: hugoblox/author/v1
+# slug: emily-davis
+# category: PhD Students
+# order: 1
+# name:
+#   display: Emily Davis
+#   given: Emily
+#   family: Davis
+# role: PhD Student (2nd Year)
+# bio: Exploring neural network architectures for biological sequence analysis and natural language processing applications in computational biology.
+# tags:
+#   - Neural Networks
+#   - Sequence Analysis
+#   - Natural Language Processing
+# links:
+#   - icon: at-symbol
+#     url: mailto:emily.davis@example.com
+#     label: Email
+#   - icon: brands/github
+#     url: https://github.com/emilydavis
+#     label: GitHub
+#   - icon: brands/linkedin
+#     url: https://www.linkedin.com/in/emilydavis
+#     label: LinkedIn
+#   - icon: academicons/google-scholar
+#     url: https://scholar.google.com/citations?user=emilydavis
+#     label: Google Scholar
+

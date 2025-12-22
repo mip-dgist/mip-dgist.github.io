@@ -1,0 +1,299 @@
+<style>
+  /* Override all possible container classes */
+  #publications .container,
+  #publications .prose,
+  section[id="publications"] .container,
+  section[id="publications"] .prose,
+  section[id="publications"] > *,
+  section[id="publications"] > * > *,
+  [id="publications"] .container,
+  [id="publications"] .prose,
+  [id="publications"] > div,
+  [id="publications"] > div > div {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+  /* Target any max-width classes */
+  section[id="publications"] [class*="max-w"],
+  [id="publications"] [class*="max-w"] {
+    max-width: 100% !important;
+  }
+  
+  .filter-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: none;
+    background-color: #f3f4f6;
+    color: #374151;
+  }
+  
+  .filter-btn:hover {
+    background-color: #e5e7eb;
+  }
+  
+  .filter-btn.active {
+    background-color: #3b82f6;
+    color: white;
+  }
+  
+  .filter-btn.active:hover {
+    background-color: #2563eb;
+  }
+  
+  .publication-card {
+    display: block;
+  }
+  
+  .publication-card.hidden {
+    display: none;
+  }
+  
+  /* Scroll animation styles */
+  .publication-card,
+  .year-header,
+  .year-divider {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .publication-card.visible,
+  .year-header.visible,
+  .year-divider.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+<div style="width: 100%; max-width: 100%; margin-left: auto; margin-right: auto; padding-left: 1rem; padding-right: 1rem;">
+  <!-- Search Bar -->
+  <div class="mb-6">
+    <input 
+      type="text" 
+      id="publication-search" 
+      placeholder="Search publications..." 
+      class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
+      style="font-size: 1rem;"
+    >
+  </div>
+  
+  <!-- Filter by Year -->
+  <div class="mb-4">
+    <span class="text-sm font-medium text-gray-700 dark:text-gray-300 mr-3">Filter by Year:</span>
+    <div class="inline-flex flex-wrap gap-2 mt-2">
+      <button class="filter-btn active" data-filter="year" data-value="all">All Years</button>
+      <button class="filter-btn" data-filter="year" data-value="2026">2026</button>
+      <button class="filter-btn" data-filter="year" data-value="2025">2025</button>
+      <button class="filter-btn" data-filter="year" data-value="2024">2024</button>
+      <button class="filter-btn" data-filter="year" data-value="2023">2023</button>
+      <button class="filter-btn" data-filter="year" data-value="2022">2022</button>
+      <button class="filter-btn" data-filter="year" data-value="2021">2021</button>
+      <button class="filter-btn" data-filter="year" data-value="-2020">-2020</button>
+    </div>
+  </div>
+  
+  <!-- Filter by Venue -->
+  <div class="mb-6">
+    <span class="text-sm font-medium text-gray-700 dark:text-gray-300 mr-3">Filter by Venue:</span>
+    <div class="inline-flex flex-wrap gap-2 mt-2">
+      <button class="filter-btn active" data-filter="venue" data-value="all">All Venues</button>
+      <button class="filter-btn" data-filter="venue" data-value="CVPR">CVPR</button>
+      <button class="filter-btn" data-filter="venue" data-value="ICCV">ICCV</button>
+      <button class="filter-btn" data-filter="venue" data-value="ECCV">ECCV</button>
+      <button class="filter-btn" data-filter="venue" data-value="NeurIPS">NeurIPS</button>
+      <button class="filter-btn" data-filter="venue" data-value="Journals">Journals</button>
+      <button class="filter-btn" data-filter="venue" data-value="Patents">Patents</button>
+      <button class="filter-btn" data-filter="venue" data-value="Other">Other</button>
+    </div>
+  </div>
+  
+  <!-- Divider below filters -->
+  <div class="mb-6 mt-2" style="border-bottom: 2px solid #3b82f6;"></div>
+  
+  <!-- Publications Grid -->
+  <div class="grid grid-cols-1 gap-4" id="publications-grid">
+  {{ $sorted := sort site.Data.publications.publications "order" }}
+  {{ $prevYear := "" }}
+  {{ range $index, $item := $sorted }}
+    {{ $year := "" }}
+    {{ if $item.date }}
+      {{ $year = ($item.date | time.Format "2006") }}
+    {{ end }}
+    {{ if and (ne $year "") (ne $year $prevYear) }}
+      {{ if ne $prevYear "" }}
+        <!-- Year divider -->
+        <div class="col-span-1 mt-1 mb-1 year-divider" style="border-bottom: 2px solid #3b82f6;"></div>
+      {{ end }}
+      <!-- Year header -->
+      <div class="col-span-1 mt-1 year-header">
+        <h2 class="font-semibold text-gray-800 dark:text-gray-200 mb-1" style="font-size: 21px;">{{ $year }}</h2>
+      </div>
+    {{ end }}
+    {{ $prevYear = $year }}
+    <div 
+      class="publication-card bg-white dark:bg-gray-800 rounded-lg shadow-md px-6 pt-3 pb-6 hover:shadow-lg transition-shadow"
+      data-year="{{ $year }}"
+      data-venue="{{ $item.venue | default "" }}"
+      data-title="{{ lower $item.title }}"
+      data-authors="{{ lower (delimit $item.authors " ") }}"
+    >
+      <h3 class="font-semibold mb-2 text-gray-900 dark:text-gray-100" style="font-size: 17px;">{{ $item.title }}</h3>
+      {{ if $item.authors }}
+        <div class="text-sm text-gray-600 dark:text-gray-400 mb-2">
+          {{ delimit $item.authors ", " }}
+        </div>
+      {{ end }}
+      {{ if $item.venue }}
+        <div class="mb-2">
+          <span class="inline-block px-3 py-1 text-xs font-medium text-blue-700 dark:text-blue-300 bg-blue-100 dark:bg-blue-900/30 rounded-md">
+            {{ $item.venue }}{{ if $item.date }} ({{ $item.date | time.Format "2006" }}){{ end }}
+          </span>
+        </div>
+      {{ else if $item.date }}
+        <div class="mb-2">
+          <span class="inline-block px-3 py-1 text-xs font-medium text-blue-700 dark:text-blue-300 bg-blue-100 dark:bg-blue-900/30 rounded-md">
+            {{ $item.date | time.Format "2006" }}
+          </span>
+        </div>
+      {{ end }}
+      {{ if $item.url }}
+        <div class="mt-3">
+          <a href="{{ $item.url }}" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline text-sm">
+            Read more →
+          </a>
+        </div>
+      {{ end }}
+    </div>
+  {{ end }}
+  </div>
+</div>
+
+<script>
+(function() {
+  const searchInput = document.getElementById('publication-search');
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const publicationCards = document.querySelectorAll('.publication-card');
+  
+  let activeFilters = {
+    year: 'all',
+    venue: 'all',
+    search: ''
+  };
+  
+  // Scroll animation observer
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, observerOptions);
+  
+  function getYearValue(yearStr) {
+    if (!yearStr) return '';
+    const year = parseInt(yearStr);
+    if (year >= 2026) return '2026';
+    if (year >= 2025) return '2025';
+    if (year >= 2024) return '2024';
+    if (year >= 2023) return '2023';
+    if (year >= 2022) return '2022';
+    if (year >= 2021) return '2021';
+    return '-2020';
+  }
+  
+  function filterPublications() {
+    publicationCards.forEach(card => {
+      const cardYear = card.getAttribute('data-year');
+      const cardVenue = card.getAttribute('data-venue') || '';
+      const cardTitle = card.getAttribute('data-title') || '';
+      const cardAuthors = card.getAttribute('data-authors') || '';
+      
+      // Year filter
+      let yearMatch = true;
+      if (activeFilters.year !== 'all') {
+        if (activeFilters.year === '-2020') {
+          yearMatch = !cardYear || parseInt(cardYear) <= 2020;
+        } else {
+          yearMatch = cardYear === activeFilters.year;
+        }
+      }
+      
+      // Venue filter
+      let venueMatch = true;
+      if (activeFilters.venue !== 'all') {
+        const knownVenues = ['cvpr', 'iccv', 'eccv', 'neurips', 'journals', 'patents'];
+        const cardVenueLower = cardVenue.toLowerCase();
+        const filterVenueLower = activeFilters.venue.toLowerCase();
+        
+        if (filterVenueLower === 'other') {
+          // Other: not CVPR, ICCV, ECCV, NeurIPS, Journals, or Patents
+          venueMatch = !knownVenues.includes(cardVenueLower);
+        } else {
+          venueMatch = cardVenueLower === filterVenueLower;
+        }
+      }
+      
+      // Search filter
+      let searchMatch = true;
+      if (activeFilters.search) {
+        const searchLower = activeFilters.search.toLowerCase();
+        searchMatch = cardTitle.includes(searchLower) || cardAuthors.includes(searchLower);
+      }
+      
+      if (yearMatch && venueMatch && searchMatch) {
+        card.classList.remove('hidden');
+        // Reset and re-observe for animation
+        if (!card.classList.contains('visible')) {
+          card.classList.remove('visible');
+          // Small delay to reset transform
+          setTimeout(() => {
+            observer.observe(card);
+          }, 50);
+        }
+      } else {
+        card.classList.add('hidden');
+        card.classList.remove('visible');
+        observer.unobserve(card);
+      }
+    });
+  }
+  
+  // Search input handler
+  searchInput.addEventListener('input', (e) => {
+    activeFilters.search = e.target.value;
+    filterPublications();
+  });
+  
+  // Filter button handlers
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filterType = btn.getAttribute('data-filter');
+      const filterValue = btn.getAttribute('data-value');
+      
+      // Update active state
+      document.querySelectorAll(`[data-filter="${filterType}"]`).forEach(b => {
+        b.classList.remove('active');
+      });
+      btn.classList.add('active');
+      
+      // Update active filter
+      activeFilters[filterType] = filterValue;
+      filterPublications();
+    });
+  });
+  
+  // Initial observation
+  document.querySelectorAll('.publication-card, .year-header, .year-divider').forEach(el => {
+    observer.observe(el);
+  });
+})();
+</script>
+

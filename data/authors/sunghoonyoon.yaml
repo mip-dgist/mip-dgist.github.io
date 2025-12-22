@@ -1,0 +1,34 @@
+schema: hugoblox/author/v1
+slug: sunghoonyoon
+is_owner: true
+category: PI
+order: 1
+name:
+  display: Sung-Hoon Yoon
+  given: Sung-Hoon
+  family: Yoon
+  pronunciation: sunghoon yoon
+  pronouns: he/him
+status:
+  icon: "☕️"
+role: Assistant Professor of Electrical Engineering and Computer Science
+bio: My research interests include distributed robotics, mobile computing and programmable matter.
+affiliations:
+  - name: DGIST
+    url: https://www.dgist.ac.kr/en_eecs/index.do
+links:
+  - icon: at-symbol
+    url: mailto:shyoon@dgist.ac.kr
+    label: E-mail Me
+  - icon: academicons/cv
+    url: https://drive.google.com/file/d/1ZShHeqt5d_jXN586ywPtG4enHqsaIDqY/view?usp=sharing
+    label: Download my resume
+  - icon: brands/github
+    url: https://github.com/yoon307
+    label: GitHub
+  - icon: brands/linkedin
+    url: https://www.linkedin.com/in/sung-hoon-yoon-8920b126a/
+    label: LinkedIn
+  - icon: academicons/google-scholar
+    url: https://scholar.google.com/citations?user=gnEghLkAAAAJ&hl=ko&oi=ao
+    label: Google Scholar

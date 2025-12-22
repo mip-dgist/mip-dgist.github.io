@@ -1,0 +1,30 @@
+# schema: hugoblox/author/v1
+# slug: john-doe
+# category: PhD Students
+# order: 3
+# name:
+#   display: John Doe
+#   given: John
+#   family: Doe
+# role: PhD Student (1st Year)
+# bio: Investigating machine learning applications in genomic medicine and precision medicine approaches for personalized treatment strategies.
+# tags:
+#   - Machine Learning
+#   - Computer Vision
+# links:
+#   - icon: at-symbol
+#     url: mailto:sarah.johnson@example.com
+#     label: Email
+#   - icon: brands/x
+#     url: https://x.com/sarahjohnson
+#     label: X (Twitter)
+#   - icon: brands/github
+#     url: https://github.com/sarahjohnson
+#     label: GitHub
+#   - icon: brands/linkedin
+#     url: https://www.linkedin.com/in/sarahjohnson
+#     label: LinkedIn
+#   - icon: academicons/google-scholar
+#     url: https://scholar.google.com/citations?user=sarahjohnson
+#     label: Google Scholar
+
