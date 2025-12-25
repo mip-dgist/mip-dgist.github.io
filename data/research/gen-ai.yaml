@@ -1,8 +1,8 @@
 slug: gen-ai
 title: Generative AI
 category: Generative AI
-description: TBD
-# image: medical-ai.png
+description: Advancing the theoretical understanding and empirical performance of generative AI models, including diffusion models, autoregressive models, and other emerging generative paradigms.
+image: gen-ai.gif
 url: https://example.com/quantum-ml
 order: 4
 

@@ -34,3 +34,55 @@ section[id="interns"] .container {
   padding-right: 1rem;
 }
 
+/* Hide "Made with Hugo Blox Builder" and "Build your site" button in footer */
+footer a[href*="hugoblox.com"],
+footer a[href*="hugoblox.com"] + *,
+footer a[href*="hugoblox.com"] ~ * {
+  display: none !important;
+}
+
+/* Hide footer elements containing Hugo Blox links */
+footer a[href*="hugoblox.com"] {
+  display: none !important;
+}
+
+/* Hide elements with Hugo Blox related classes or attributes */
+footer [class*="blox"],
+footer [data-blox],
+footer .powered-by {
+  display: none !important;
+}
+
+/* Hide parent containers of Hugo Blox links using :has() selector (modern browsers) */
+footer:has(a[href*="hugoblox.com"]) > div:last-child,
+footer:has(a[href*="hugoblox.com"]) > p:last-child {
+  display: none !important;
+}
+
+/* Note: License text is kept visible, only Hugo Blox attribution is hidden */
+
+/* Increase header logo size - Slightly larger */
+#site-header img,
+header img,
+.navbar img,
+header a img,
+.navbar a img,
+[class*="navbar"] img,
+[class*="header"] img {
+  height: auto !important;
+  max-height: 45px !important;
+  width: auto !important;
+  max-width: 180px !important;
+  transform: scale(1.1) !important;
+}
+
+/* Target logo container */
+.navbar > div:first-child img,
+header .navbar > div:first-child img {
+  height: auto !important;
+  max-height: 45px !important;
+  width: auto !important;
+  max-width: 180px !important;
+  transform: scale(1.1) !important;
+}
+

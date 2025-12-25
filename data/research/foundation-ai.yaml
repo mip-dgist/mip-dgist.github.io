@@ -1,0 +1,8 @@
+slug: foundation-ai
+title: Foundation Model
+category: Foundation Model
+description: We study how to adapt and fine-tune foundation models for domain-specific tasks, with a focus on efficient and robust transfer to areas such as medicine and robotics.
+image: foundation-ai.gif
+url: https://example.com/quantum-ml
+order: 3
+

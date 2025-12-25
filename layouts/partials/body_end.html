@@ -1,0 +1,42 @@
+<!-- Force favicon change via JavaScript - Bypass browser cache -->
+<script>
+(function() {
+  // Remove ALL existing favicon links including Hugo Blox defaults
+  var existingIcons = document.querySelectorAll('link[rel*="icon"], link[rel="shortcut icon"]');
+  existingIcons.forEach(function(icon) {
+    icon.remove();
+  });
+  
+  // Force remove from cache by adding timestamp
+  var timestamp = new Date().getTime();
+  
+  // Add new favicon with cache busting
+  var link = document.createElement('link');
+  link.rel = 'icon';
+  link.type = 'image/png';
+  link.href = '/favicon.png?v=' + timestamp + '&nocache=' + Math.random();
+  document.head.insertBefore(link, document.head.firstChild);
+  
+  // Also add shortcut icon
+  var shortcutLink = document.createElement('link');
+  shortcutLink.rel = 'shortcut icon';
+  shortcutLink.type = 'image/png';
+  shortcutLink.href = '/favicon.png?v=' + timestamp + '&nocache=' + Math.random();
+  document.head.insertBefore(shortcutLink, document.head.firstChild);
+  
+  // Also update apple-touch-icon
+  var appleLink = document.createElement('link');
+  appleLink.rel = 'apple-touch-icon';
+  appleLink.href = '/favicon.png?v=' + timestamp + '&nocache=' + Math.random();
+  document.head.insertBefore(appleLink, document.head.firstChild);
+  
+  // Force browser to reload favicon
+  if (document.querySelector('link[rel="icon"]')) {
+    var favicon = document.querySelector('link[rel="icon"]');
+    var newFavicon = favicon.cloneNode(false);
+    newFavicon.href = '/favicon.png?v=' + timestamp + '&force=' + Math.random();
+    favicon.parentNode.replaceChild(newFavicon, favicon);
+  }
+})();
+</script>
+

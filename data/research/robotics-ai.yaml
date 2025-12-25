@@ -1,8 +1,8 @@
 slug: physical-ai
 title: Physical AI
-category: Physical AI
+category: Robotics
+image: physical-ai.gif
 description: Advancing the frontier of Embodied AI by integrating multimodal perception with real-world robotic control to automate complex physical tasks.
-# image: medical-ai.png
 url: https://example.com/quantum-ml
 order: 3
 
