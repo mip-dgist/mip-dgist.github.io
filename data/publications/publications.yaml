@@ -9,7 +9,7 @@
     - Mengyu Wang
   venue: NeurIPS
   date: 2025-01-01
-  order: 1
+  # order: 1
 
 - slug: class-tokens-infusion-2024
   title: Class Tokens Infusion for Weakly Supervised Semantic Segmentation
@@ -20,7 +20,7 @@
     - Kuk-Jin Yoon
   venue: CVPR
   date: 2024-01-01
-  order: 2
+  # order: 2
 
 - slug: t4p-2024
   title: "T4P: Test-Time Training of Trajectory Prediction via Masked Autoencoder and Actor-specific Token Memory"
@@ -32,7 +32,7 @@
     - Kuk-Jin Yoon
   venue: CVPR
   date: 2024-01-01
-  order: 3
+  # order: 3
 
 - slug: on-the-fly-category-discovery-2024
   title: On-the-fly Category Discovery for LiDAR Semantic Segmentation
@@ -43,7 +43,7 @@
     - Kuk-Jin Yoon
   venue: ECCV
   date: 2024-01-01
-  order: 4
+  # order: 4
 
 - slug: finding-meaning-in-points-2024
   title: "Finding Meaning in Points: Weakly-Supervised Semantic Segmentation for Event Cameras"
@@ -54,7 +54,7 @@
     - Kuk-Jin Yoon
   venue: ECCV
   date: 2024-01-01
-  order: 5
+  # order: 5
 
 - slug: diffusion-guided-wsss-2024
   title: Diffusion-Guided Weakly Supervised Semantic Segmentation
@@ -66,7 +66,7 @@
     - Kuk-Jin Yoon
   venue: ECCV
   date: 2024-01-01
-  order: 6
+  # order: 6
 
 - slug: phase-concentration-2024
   title: Phase Concentration and Shortcut Suppression for Weakly Supervised Semantic Segmentation
@@ -77,7 +77,7 @@
     - Kuk-Jin Yoon
   venue: ECCV
   date: 2024-01-01
-  order: 7
+  # order: 7
 
 - slug: adversarial-learning-classifier-2023
   title: Weakly Supervised Semantic Segmentation via Adversarial Learning of Classifier and Reconstructor
@@ -87,7 +87,7 @@
     - Kuk-Jin Yoon
   venue: CVPR
   date: 2023-01-01
-  order: 8
+  # order: 8
 
 - slug: adversarial-erasing-triplet-2022
   title: Adversarial Erasing Framework via Triplet with Gated Pyramid Pooling Layer for Weakly Supervised Semantic Segmentation
@@ -99,7 +99,7 @@
     - Kuk-Jin Yoon
   venue: ECCV
   date: 2022-01-01
-  order: 9
+  # order: 9
 
 - slug: unlocking-potential-classifier-2021
   title: "Unlocking the Potential of Ordinary Classifier: Class-specific Adversarial Erasing Framework for Weakly Supervised Semantic Segmentation"
@@ -111,7 +111,7 @@
     - Kuk-Jin Yoon
   venue: ICCV
   date: 2021-01-01
-  order: 10
+  # order: 10
 
 - slug: evdistill-2021
   title: "EvDistill: Asynchronous Events to End-task Learning via Bidirectional Reconstruction-guided Cross-modal Knowledge Distillation"
@@ -123,7 +123,7 @@
     - Kuk-Jin Yoon
   venue: CVPR
   date: 2021-01-01
-  order: 11
+  # order: 11
 
 - slug: exploring-pixel-level-2021
   title: Exploring Pixel-level Self-supervision for Weakly Supervised Semantic Segmentation
@@ -136,4 +136,4 @@
     - Kuk-Jin Yoon
   venue: ArXiv
   date: 2021-01-01
-  order: 12
+  # order: 12

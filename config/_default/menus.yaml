@@ -21,9 +21,12 @@ main:
   - name: Publications
     url: /publications/
     weight: 37
+  - name: News
+    url: /news/
+    weight: 38
   - name: Contact
     url: /contact/
-    weight: 38
+    weight: 39
   # - name: Resources
   #   weight: 40
   #   hasChildren: true

@@ -1,0 +1,25 @@
+news:
+  - date: 2025-12-05
+    type: publication
+    title: "A Paper accepted to TPAMI 2025"
+    description: "A paper from VILAB is accepted to TPAMI 2025."
+    order: 1
+
+  - date: 2025-11-06
+    type: publication
+    title: "Papers accepted to WACV 2026"
+    description: "3 papers from VILAB are accepted to WACV 2026."
+    order: 2
+
+  - date: 2025-09-18
+    type: publication
+    title: "A Paper accepted to NeurIPS 2025"
+    description: "A paper from VILAB is accepted to NeurIPS 2025."
+    order: 3
+
+  - date: 2025-08-28
+    type: admission
+    title: "New students joined VILAB (August 2025)"
+    description: "We welcome a new MS student to VILAB."
+    order: 4
+

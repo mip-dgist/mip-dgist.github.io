@@ -115,9 +115,8 @@
   
   <!-- Publications Grid -->
   <div class="grid grid-cols-1 gap-4" id="publications-grid">
-  {{ $sorted := sort site.Data.publications.publications "order" }}
   {{ $prevYear := "" }}
-  {{ range $index, $item := $sorted }}
+  {{ range $index, $item := site.Data.publications.publications }}
     {{ $year := "" }}
     {{ if $item.date }}
       {{ $year = ($item.date | time.Format "2006") }}
