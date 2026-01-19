@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 28 28" stroke-width="1.5" stroke="currentColor">
+  <!-- Robot head -->
+  <rect x="6" y="4" width="12" height="10" rx="2" stroke="currentColor" fill="none"/>
+  <!-- Robot eyes -->
+  <circle cx="9" cy="8" r="1.5" fill="currentColor"/>
+  <circle cx="15" cy="8" r="1.5" fill="currentColor"/>
+  <!-- Robot antenna -->
+  <line x1="12" y1="4" x2="12" y2="2" stroke="currentColor" stroke-linecap="round"/>
+  <circle cx="12" cy="1.5" r="0.5" fill="currentColor"/>
+  <!-- Robot body -->
+  <rect x="7" y="14" width="10" height="8" rx="1" stroke="currentColor" fill="none"/>
+  <!-- Robot buttons -->
+  <circle cx="10" cy="17" r="0.8" fill="currentColor"/>
+  <circle cx="12" cy="17" r="0.8" fill="currentColor"/>
+  <circle cx="14" cy="17" r="0.8" fill="currentColor"/>
+  <!-- Robot arms -->
+  <line x1="6" y1="9" x2="2" y2="12" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"/>
+  <line x1="18" y1="9" x2="22" y2="12" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"/>
+  <!-- Robot legs -->
+  <line x1="9" y1="22" x2="9" y2="26" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"/>
+  <line x1="15" y1="22" x2="15" y2="26" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"/>
+</svg>

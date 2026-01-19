@@ -71,18 +71,21 @@ sections:
         - name: Multimodal AI
           icon: rectangle-group
           description: Research on integrating vision, language, and other modalities for intelligent perception systems.
+        - name: Physical AI
+          icon: custom/robot
+          description: Developing Vision-Language-Action (VLA) model for autonomous robot. 
         - name: Computer Vision
           icon: eye
           description: Advanced research in semantic segmentation, object detection, and scene understanding.
-        - name: Medical AI
-          icon: sparkles
-          description: Applying AI and deep learning to medical imaging, diagnosis, and healthcare applications.
+        - name: Medical AI / AI for Science
+          icon: custom/medical-ai
+          description: Applying AI and deep learning to medical imaging, diagnosis, and healthcare applications. Delving into genomics and protein design with AI. 
         - name: Top-Tier Publications
           icon: star
           description: Publishing cutting-edge research at top-tier conferences including CVPR, ICCV, ECCV, and NeurIPS.
-        - name: Real-World Applications
-          icon: bolt
-          description: Translating research into practical solutions for autonomous systems and robotics.
+        # - name: Real-World Applications
+        #   icon: bolt
+        #   description: Translating research into practical solutions for autonomous systems and robotics.
         - name: Collaborative Research
           icon: users
           description: Working with international collaborators and industry partners on innovative AI solutions.

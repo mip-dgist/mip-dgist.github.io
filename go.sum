@@ -1,4 +1,12 @@
+github.com/HugoBlox/hugo-blox-builder/modules/blox-analytics v0.3.0 h1:dsWADTg5iRxn1f9oGnqyAiLvB7B45VueXM4z46Oz4Ls=
+github.com/HugoBlox/hugo-blox-builder/modules/blox-analytics v0.3.0/go.mod h1:0YQtVvRLCzZOpPmbVNk7WDx8t19/QfRTFO+pwyqQNk8=
 github.com/HugoBlox/hugo-blox-builder/modules/blox-plugin-netlify v0.0.0-20251215001347-c72b26de8d15 h1:kK7WGIwmMcQS1DiIkpyTwToBf3som+dL7EraGgpC88g=
 github.com/HugoBlox/hugo-blox-builder/modules/blox-plugin-netlify v0.0.0-20251215001347-c72b26de8d15/go.mod h1:C7jfxMLv1bEUqbM9XDSmEpfOpS8w06OgqNDEcbuRgL4=
 github.com/HugoBlox/hugo-blox-builder/modules/blox-tailwind v0.0.0-20251214032829-73b5f7d5758a h1:2JpJHmboUMvlW8ZHLnc2Zb9PlULB0huwYq3/DfjEU6k=
 github.com/HugoBlox/hugo-blox-builder/modules/blox-tailwind v0.0.0-20251214032829-73b5f7d5758a/go.mod h1:blQEm4Y+xVVX9OTVDnO+p0MwHTy3hQdpU6pZK659DiI=
+github.com/hugomods/font-awesome v6.7.1+incompatible h1:eM2vtHyQJVMnD9tgdGFbEgEiPh3sqnmu3EP3CFTyPLY=
+github.com/hugomods/font-awesome v6.7.1+incompatible/go.mod h1:C2wW6xDvHkcMlJMVTPQ+Npt+rO0OGv13xT1iyll2z2Q=
+github.com/hugomods/icons v0.6.6 h1:gGlafcBDRP7sSID+tgLcWdog+s/QBj8DIfU+h9tZj1U=
+github.com/hugomods/icons v0.6.6/go.mod h1:cIkSvK6W0q6N4U6n9KGz+QfRWQXAW0INd+1P31gPNGg=
+github.com/hugomods/icons/vendors/font-awesome v0.6.12 h1:I8ckJFuxr8mD8bJ4NX9NrmnHd3f6XvITuD2ME8a9wXc=
+github.com/hugomods/icons/vendors/font-awesome v0.6.12/go.mod h1:6YBo/5GaNpAocKwnKNWcd9xkliiRJXmwz2mstY5lr9I=
