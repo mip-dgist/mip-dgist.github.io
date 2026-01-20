@@ -11,7 +11,12 @@ sections:
     id: contact-info
     content:
       title: Contact Information
-      text: The MIP Lab is seeking passionate and motivated students (M.S./Ph.D. students and undergraduate interns) to join our research team. If you are interested in developing and advancing multimodal AI for robotics, medicine, and autonomous systems, please feel free to contact me at shyoon@dgist.ac.kr. When emailing, please include a brief description of your research interests, your CV, and your transcript.
+      text: |
+        MIP 랩에서는 열정적으로 연구하실 학생들을 (석사과정, 박사과정 및 학부 연구생) 모집하고 있습니다. 로봇, 의료, 자율주행 시스템 등의 기반이 되는 Multimodal (Vision-Language) AI 를 연구하고 싶으시다면 언제든 편하게 shyoon@dgist.ac.kr 로 메일 주시기 바랍니다. 이메일에는 간단히 관심있는 연구분야, CV, 성적표를 첨부주시면 됩니다 :)
+        
+        <br>
+        
+        The MIP Lab is seeking passionate and motivated students (M.S./Ph.D. students and undergraduate interns) to join our research team. If you are interested in developing and advancing multimodal AI for robotics, medicine, and autonomous systems, please feel free to contact me at shyoon@dgist.ac.kr. When emailing, please include a brief description of your research interests, your CV, and your transcript.
       items:
         - name: Email
           icon: at-symbol

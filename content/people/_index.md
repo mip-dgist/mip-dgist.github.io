@@ -20,19 +20,19 @@ sections:
       css_class: "bg-gray-100 dark:bg-gray-900"
       css_style: "max-width: 100% !important; width: 100% !important;"
       container: false
-  - block: markdown
-    id: postdoc
-    content:
-      title: Postdoc
-      text: |
-        <div class="mb-2" style="border-bottom: 2px solid #3b82f6; max-width: 80%; margin-top: -1rem;"></div>
-        {{< people-postdoc >}}
-    design:
-      spacing:
-        padding: ["2rem", 0, "2rem", 0]
-      css_class: "bg-gray-100 dark:bg-gray-900"
-      css_style: "max-width: 100% !important; width: 100% !important;"
-      container: false
+  # - block: markdown
+  #   id: postdoc
+  #   content:
+  #     title: Postdoc
+  #     text: |
+  #       <div class="mb-2" style="border-bottom: 2px solid #3b82f6; max-width: 80%; margin-top: -1rem;"></div>
+  #       {{< people-postdoc >}}
+  #   design:
+  #     spacing:
+  #       padding: ["2rem", 0, "2rem", 0]
+  #     css_class: "bg-gray-100 dark:bg-gray-900"
+  #     css_style: "max-width: 100% !important; width: 100% !important;"
+  #     container: false
   - block: markdown
     id: phd-students
     content:
@@ -62,7 +62,7 @@ sections:
   - block: markdown
     id: interns
     content:
-      title: Interns
+      title: Undergraduate Students
       text: |
         <div class="mb-2" style="border-bottom: 2px solid #3b82f6; max-width: 80%; margin-top: -1rem;"></div>
         {{< people-interns >}}
