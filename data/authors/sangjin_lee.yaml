@@ -1,0 +1,29 @@
+schema: hugoblox/author/v1
+slug: sangjin_lee
+category: Master Students
+order: 1
+name:
+  display: Sangjin Lee
+  given: Sangjin
+  family: Lee
+role: Master Student (1st Year)
+bio: TBD.
+tags:
+  - TBD
+links:
+  - icon: at-symbol
+    url: mailto:sarah.johnson@example.com
+    label: Email
+  - icon: brands/x
+    url: https://x.com/sarahjohnson
+    label: X (Twitter)
+  - icon: brands/github
+    url: https://github.com/sarahjohnson
+    label: GitHub
+  - icon: brands/linkedin
+    url: https://www.linkedin.com/in/sarahjohnson
+    label: LinkedIn
+  - icon: academicons/google-scholar
+    url: https://scholar.google.com/citations?user=sarahjohnson
+    label: Google Scholar
+

@@ -1,12 +1,15 @@
+# Manual for adding a new author
+
+
 # schema: hugoblox/author/v1
-# slug: john-doe
-# category: PhD Students
+# slug: john-doe #this will call the image file in the public/media/authors/john-doe.jpg
+# category: PhD Students #option - Master Students, Interns, Postdocs
 # order: 3
 # name:
 #   display: John Doe
 #   given: John
 #   family: Doe
-# role: PhD Student (1st Year)
+# role: PhD Student (1st Year) #option - Master Student, Intern
 # bio: Investigating machine learning applications in genomic medicine and precision medicine approaches for personalized treatment strategies.
 # tags:
 #   - Machine Learning

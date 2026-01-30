@@ -1,0 +1,30 @@
+schema: hugoblox/author/v1
+slug: chanhyuk_ju
+category: Interns
+order: 1
+name:
+  display: Chanhyuk Ju
+  given: Chanhyuk
+  family: Ju
+role: Intern
+bio: Developing VLA-based Robot Manipulation and Multi-modal Robot Action Learning.
+tags:
+  - VLA-based Robot Manipulation
+  - Multi-modal Robot Action Learning
+links:
+  - icon: at-symbol
+    url: mailto:sarah.johnson@example.com
+    label: Email
+  - icon: brands/x
+    url: https://x.com/sarahjohnson
+    label: X (Twitter)
+  - icon: brands/github
+    url: https://github.com/sarahjohnson
+    label: GitHub
+  - icon: brands/linkedin
+    url: https://www.linkedin.com/in/sarahjohnson
+    label: LinkedIn
+  - icon: academicons/google-scholar
+    url: https://scholar.google.com/citations?user=sarahjohnson
+    label: Google Scholar
+

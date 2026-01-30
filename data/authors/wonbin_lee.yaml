@@ -1,0 +1,32 @@
+schema: hugoblox/author/v1
+slug: wonbin_lee
+category: Interns
+order: 1
+name:
+  display: Wonbin Lee
+  given: Wonbin
+  family: Lee
+role: Intern
+bio: My research interests include 3D scene editing from captured 3D scenes, focusing on manipulations such as object removal,
+ environmental condition changes (e.g., weather), and human motion editing, while maintaining geometric and visual consistency.
+tags:
+  - Gaussian Splatting
+  - NeRF
+  - 3D Scene Editing
+links:
+  - icon: at-symbol
+    url: mailto:sarah.johnson@example.com
+    label: Email
+  - icon: brands/x
+    url: https://x.com/sarahjohnson
+    label: X (Twitter)
+  - icon: brands/github
+    url: https://github.com/sarahjohnson
+    label: GitHub
+  - icon: brands/linkedin
+    url: https://www.linkedin.com/in/sarahjohnson
+    label: LinkedIn
+  - icon: academicons/google-scholar
+    url: https://scholar.google.com/citations?user=sarahjohnson
+    label: Google Scholar
+
