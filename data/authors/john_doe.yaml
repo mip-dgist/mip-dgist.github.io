@@ -3,9 +3,9 @@ slug: john_doe
 category: Interns
 order: 3
 name:
-  display: Taekmin Yoon
+  display: Taekmin Youn
   given: Taekmin
-  family: Yoon
+  family: Youn
 role: Intern
 bio: My research interests include Vision-Language model, Efficient model, and Vision-Language-Action (VLA) model.
 tags:
