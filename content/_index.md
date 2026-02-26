@@ -18,7 +18,7 @@ sections:
         icon: rocket-launch
       secondary_action:
         text: Read the News
-        url: https://docs.hugoblox.com
+        url: /news/
       announcement:
         text: "We are welcoming new students and interns."
         link:
@@ -89,6 +89,19 @@ sections:
         - name: Collaborative Research
           icon: users
           description: Working with international collaborators and industry partners on innovative AI solutions.
+  - block: markdown
+    id: news
+    content:
+      title: ""
+      text: |
+        <h2 style="text-align: center; margin-bottom: 2rem; font-size: 2rem; font-weight: 700;">Latest News</h2>
+        {{< news-cards >}}
+    design:
+      spacing:
+        padding: ["2rem", 0, "2rem", 0]
+      css_class: "bg-gray-100 dark:bg-gray-900"
+      css_style: "max-width: 100% !important; width: 100% !important;"
+      container: false
   # - block: cta-image-paragraph
   #   id: solutions
   #   content:

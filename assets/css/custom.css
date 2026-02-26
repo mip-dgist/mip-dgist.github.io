@@ -86,3 +86,9 @@ header .navbar > div:first-child img {
   transform: scale(1.1) !important;
 }
 
+/* Center align News section title on homepage */
+section[id="news"] h1,
+section[id="news"] h2,
+section[id="news"] .section-heading {
+  text-align: center !important;
+}

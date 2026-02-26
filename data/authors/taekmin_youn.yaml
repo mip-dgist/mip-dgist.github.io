@@ -1,17 +1,17 @@
 schema: hugoblox/author/v1
-slug: john_doe
+slug: taekmin_youn
 category: Interns
-order: 5
+order: 3
 name:
-  display: Hyobin Choi
-  given: Hyobin
-  family: Choi
+  display: Taekmin Youn
+  given: Taekmin
+  family: Youn
 role: Intern
-bio: Exploring multimodal perception and foundation model adaptation for physical AI systems
+bio: My research interests include Vision-Language model, Efficient model, and Vision-Language-Action (VLA) model.
 tags:
-  - Multimodal Learning
-  - Foundation Model Adaptation
-  - Physical AI
+  - Vision-Language model
+  - Efficient model
+  - Vision-Language-Action (VLA) model 
 links:
   - icon: at-symbol
     url: mailto:sarah.johnson@example.com

@@ -1,3 +1,15 @@
+
+- date: 2026-02-23
+  type: admission
+  title: "New students joined MIP Lab (Spring 2026)"
+  description: "We welcome a new MS student (Sangjin Lee) and new undergraduate students to MIP Lab."
+
+- date: 2025-02-21
+  type: publication
+  title: "A paper accepted to CVPR 2026"
+  description: "A paper from MIP Lab is accepted to CVPR 2026. <Delta velocity rectified flow for text-to-image editing, Gaspard Beaudouin, Minghan Li, Jaeyeon Kim, Sung-Hoon Yoon*, Mengyu Wang*>"
+
+
 - date: 2025-12-30
   type: grant
   title: "Selected as Beta Service Participant for Advanced GPU Utilization Support Program"

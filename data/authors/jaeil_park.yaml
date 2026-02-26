@@ -1,17 +1,16 @@
 schema: hugoblox/author/v1
-slug: john_doe
+slug: jaeil_park
 category: Interns
-order: 5
+order: 4
 name:
-  display: Hyobin Choi
-  given: Hyobin
-  family: Choi
+  display: Jaeil Park
+  given: Jaeil
+  family: Park
 role: Intern
-bio: Exploring multimodal perception and foundation model adaptation for physical AI systems
+bio: My research interests include Social Navigation and Vision-Language-Action(VLA) model.
 tags:
-  - Multimodal Learning
-  - Foundation Model Adaptation
-  - Physical AI
+  - Social Navigation
+  - Vision-Language-Action(VLA) model
 links:
   - icon: at-symbol
     url: mailto:sarah.johnson@example.com
