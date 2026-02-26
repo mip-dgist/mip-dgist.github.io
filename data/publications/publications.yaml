@@ -1,3 +1,14 @@
+- slug: deltavelocity-2026
+  title: "Delta Velocity Rectified Flow for Text-to-Image Editing"
+  authors:
+    - Gaspard Beaudouin
+    - Minghan Li
+    - Jaeyeon Kim
+    - Sung-Hoon Yoon*
+    - Mengyu Wang* (*co-corresponding author)
+  venue: CVPR
+  date: 2026-02-21
+
 - slug: splitflow-2025
   title: "SplitFlow: Flow Decomposition for Inversion-Free Text-to-Image Editing"
   authors:
