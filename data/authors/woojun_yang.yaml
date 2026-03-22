@@ -1,0 +1,30 @@
+schema: hugoblox/author/v1
+slug: woojun_yang
+category: Interns
+order: 6
+name:
+  display: Woojun Yang
+  given: Woojun
+  family: Yang
+role: Intern
+bio: My research interests include Vision-Language-Action(VLA) model and Medical AI.
+tags:
+  - Vision-Language-Action(VLA) model
+  - Medical AI
+links:
+  - icon: at-symbol
+    url: mailto:sarah.johnson@example.com
+    label: Email
+  - icon: brands/x
+    url: https://x.com/sarahjohnson
+    label: X (Twitter)
+  - icon: brands/github
+    url: https://github.com/sarahjohnson
+    label: GitHub
+  - icon: brands/linkedin
+    url: https://www.linkedin.com/in/sarahjohnson
+    label: LinkedIn
+  - icon: academicons/google-scholar
+    url: https://scholar.google.com/citations?user=sarahjohnson
+    label: Google Scholar
+

@@ -1,0 +1,31 @@
+schema: hugoblox/author/v1
+slug: hyobin_choi
+category: Interns
+order: 5
+name:
+  display: Hyobin Choi
+  given: Hyobin
+  family: Choi
+role: Intern
+bio: Exploring multimodal perception and foundation model adaptation for physical AI systems
+tags:
+  - Multimodal Learning
+  - Foundation Model Adaptation
+  - Physical AI
+links:
+  - icon: at-symbol
+    url: mailto:sarah.johnson@example.com
+    label: Email
+  - icon: brands/x
+    url: https://x.com/sarahjohnson
+    label: X (Twitter)
+  - icon: brands/github
+    url: https://github.com/sarahjohnson
+    label: GitHub
+  - icon: brands/linkedin
+    url: https://www.linkedin.com/in/sarahjohnson
+    label: LinkedIn
+  - icon: academicons/google-scholar
+    url: https://scholar.google.com/citations?user=sarahjohnson
+    label: Google Scholar
+

@@ -1,16 +1,16 @@
 schema: hugoblox/author/v1
-slug: john_doe
+slug: minjeong_kim
 category: Interns
-order: 5
+order: 7
 name:
-  display: Hyobin Choi
-  given: Hyobin
-  family: Choi
+  display: Minjeong Kim
+  given: Minjeong
+  family: Kim
 role: Intern
-bio: Exploring multimodal perception and foundation model adaptation for physical AI systems
+bio: My research interests include multimodal learning, vision-language-action (VLA) models, and physical AI systems.
 tags:
   - Multimodal Learning
-  - Foundation Model Adaptation
+  - Vision-Language-Action (VLA)
   - Physical AI
 links:
   - icon: at-symbol
