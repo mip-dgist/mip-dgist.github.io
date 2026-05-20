@@ -1,3 +1,8 @@
+- date: 2026-05-20
+  type: award
+  title: "1st place at ICRA 2026 Workshop on Field Robotics (GOOSE 2D Fine-Grained Semantic Segmentation Challenge)"
+  description: "MIP Lab (Jaeil Park, Hyobin Choi, Sangjin Lee) placed 1st in the competition track of the ICRA 2026 Workshop on Field Robotics — GOOSE 2D Fine-Grained Semantic Segmentation Challenge, focusing on robust scene understanding in unstructured outdoor and off-road environments. Co-advised by Dr. Hyungtae Lim (MIT SPARK Lab)."
+
 
 - date: 2026-04-30
   type: grant
