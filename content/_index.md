@@ -10,7 +10,7 @@ design:
 sections:
   - block: hero
     content:
-      title: Multimodal Intelligence and Perception Labortory
+      title: Multimodal Intelligence and Perception Laboratory
       text: DGIST (Daegu Gyeongbuk Institute of Science and Technology)
       primary_action:
         text: Meet our team

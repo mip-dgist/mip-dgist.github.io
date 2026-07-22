@@ -3,6 +3,6 @@ title: Generative AI
 category: Generative AI
 description: Advancing the theoretical understanding and empirical performance of generative AI models, including diffusion models, autoregressive models, and other emerging generative paradigms.
 image: gen-ai.gif
-url: https://example.com/quantum-ml
+# url: https://example.com/  # 관련 페이지가 있으면 주석(#)을 지우고 URL을 넣으세요
 order: 4
 
