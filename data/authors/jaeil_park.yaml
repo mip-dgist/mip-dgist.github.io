@@ -1,12 +1,12 @@
 schema: hugoblox/author/v1
 slug: jaeil_park
-category: Interns
-order: 4
+category: Master Students
+order: 5
 name:
   display: Jaeil Park
   given: Jaeil
   family: Park
-role: Intern
+role: Master Student (1st Year)
 bio: My research interests include Social Navigation and Vision-Language-Action(VLA) model.
 tags:
   - Social Navigation
@@ -15,14 +15,14 @@ links:
   - icon: at-symbol
     url: mailto:sarah.johnson@example.com
     label: Email
-  - icon: brands/x
-    url: https://x.com/sarahjohnson
-    label: X (Twitter)
+  # - icon: brands/x
+  #   url: https://x.com/sarahjohnson
+  #   label: X (Twitter)
   - icon: brands/github
-    url: https://github.com/sarahjohnson
+    url: https://github.com/iamjaeil
     label: GitHub
   - icon: brands/linkedin
-    url: https://www.linkedin.com/in/sarahjohnson
+    url: https://www.linkedin.com/in/jaeil-park-683337408/
     label: LinkedIn
   - icon: academicons/google-scholar
     url: https://scholar.google.com/citations?user=sarahjohnson

@@ -15,14 +15,14 @@ links:
   - icon: at-symbol
     url: mailto:sarah.johnson@example.com
     label: Email
-  - icon: brands/x
-    url: https://x.com/sarahjohnson
-    label: X (Twitter)
+  # - icon: brands/x
+  #   url: https://x.com/sarahjohnson
+  #   label: X (Twitter)
   - icon: brands/github
-    url: https://github.com/sarahjohnson
+    url: https://github.com/lsjin01
     label: GitHub
   - icon: brands/linkedin
-    url: https://www.linkedin.com/in/sarahjohnson
+    url: https://www.linkedin.com/in/%EC%83%81%EC%A7%84-%EC%9D%B4-2297553a9/
     label: LinkedIn
   - icon: academicons/google-scholar
     url: https://scholar.google.com/citations?user=sarahjohnson

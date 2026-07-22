@@ -14,16 +14,16 @@ tags:
   - Physical AI
 links:
   - icon: at-symbol
-    url: mailto:sarah.johnson@example.com
+    url: mailto:hyobin01@dgist.ac.kr
     label: Email
-  - icon: brands/x
-    url: https://x.com/sarahjohnson
-    label: X (Twitter)
+  # - icon: brands/x
+  #   url: https://x.com/sarahjohnson
+  #   label: X (Twitter)
   - icon: brands/github
-    url: https://github.com/sarahjohnson
+    url: https://github.com/HYOBINCHOI
     label: GitHub
   - icon: brands/linkedin
-    url: https://www.linkedin.com/in/sarahjohnson
+    url: https://www.linkedin.com/in/hyobinchoi/
     label: LinkedIn
   - icon: academicons/google-scholar
     url: https://scholar.google.com/citations?user=sarahjohnson
