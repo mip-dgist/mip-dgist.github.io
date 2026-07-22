@@ -1,17 +1,16 @@
 schema: hugoblox/author/v1
-slug: minjeong_kim
+slug: seungyun_choi
 category: Interns
-order: 7
+order: 6
 name:
-  display: Minjeong Kim
-  given: Minjeong
-  family: Kim
+  display: Seungyun Choi
+  given: Seungyun
+  family: Choi
 role: Intern
-bio: My research interests include multimodal learning, vision-language-action (VLA) models, and physical AI systems.
+bio: My research interests include Multimodal AI, Vision-Language model.
 tags:
-  - Multimodal Learning
-  - Vision-Language-Action (VLA)
-  - Physical AI
+  - Multimodal AI
+  - Vision-Language model
 links:
   - icon: at-symbol
     url: mailto:sarah.johnson@example.com
