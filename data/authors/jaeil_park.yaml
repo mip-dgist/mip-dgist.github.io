@@ -6,8 +6,8 @@ name:
   display: Jaeil Park
   given: Jaeil
   family: Park
-role: Master Student (1st Year)
-bio: My research interests include Social Navigation and Vision-Language-Action(VLA) model.
+role: Master Student
+# bio: My research interests include Social Navigation and Vision-Language-Action(VLA) model.
 tags:
   - Social Navigation
   - Vision-Language-Action(VLA) model

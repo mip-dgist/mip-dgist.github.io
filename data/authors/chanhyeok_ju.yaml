@@ -1,13 +1,13 @@
 schema: hugoblox/author/v1
-slug: chanhyuk_ju
+slug: chanhyeok_ju
 category: Master Students
 order: 2
 name:
-  display: Chanhyuk Ju
-  given: Chanhyuk
+  display: Chanhyeok Ju
+  given: Chanhyeok
   family: Ju
-role: Master Student (1st Year)
-bio: Developing VLA-based Robot Manipulation and Multi-modal Robot Action Learning.
+role: Master Student
+# bio: Developing VLA-based Robot Manipulation and Multi-modal Robot Action Learning.
 tags:
   - VLA-based Robot Manipulation
   - Multi-modal Robot Action Learning

@@ -7,7 +7,7 @@ name:
   given: Seungyun
   family: Choi
 role: Intern
-bio: My research interests include Multimodal AI, Vision-Language model.
+# bio: My research interests include Multimodal AI, Vision-Language model.
 tags:
   - Multimodal AI
   - Vision-Language model

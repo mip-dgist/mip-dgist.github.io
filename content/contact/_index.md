@@ -37,7 +37,7 @@ sections:
         - name: Lab Office
           icon: building-office
           description: |
-            R3 Bldg - 805/806
+            R7 Bldg - 511
     design:
       spacing:
         padding: ["2rem", 0, "2rem", 0]
