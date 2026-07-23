@@ -6,24 +6,26 @@ name:
   display: Sangjin Lee
   given: Sangjin
   family: Lee
-role: Master Student (1st Year)
-bio: My research interests include Multimodal AI, Robot Planning.
+role: Master Student
+is_lab_representative: true
+# bio: My research interests include Multimodal AI, Robot Planning.
 tags:
   - Multimodal AI
   - Robot Planning
-# 링크(이메일, GitHub, Google Scholar 등)를 넣으려면 아래 주석(#)을 지우고
-# 본인 정보로 채우세요. 필요 없는 항목은 그대로 두거나 삭제하면 됩니다.
-# links:
-#   - icon: at-symbol
-#     url: mailto:your_id@dgist.ac.kr
-#     label: Email
-#   - icon: brands/github
-#     url: https://github.com/your_id
-#     label: GitHub
-#   - icon: brands/linkedin
-#     url: https://www.linkedin.com/in/your_id
-#     label: LinkedIn
-#   - icon: academicons/google-scholar
-#     url: https://scholar.google.com/citations?user=your_id
-#     label: Google Scholar
+links:
+  - icon: at-symbol
+    url: mailto:sarah.johnson@example.com
+    label: Email
+  # - icon: brands/x
+  #   url: https://x.com/sarahjohnson
+  #   label: X (Twitter)
+  - icon: brands/github
+    url: https://github.com/lsjin01
+    label: GitHub
+  - icon: brands/linkedin
+    url: https://www.linkedin.com/in/%EC%83%81%EC%A7%84-%EC%9D%B4-2297553a9/
+    label: LinkedIn
+  - icon: academicons/google-scholar
+    url: https://scholar.google.com/citations?user=sarahjohnson
+    label: Google Scholar
 

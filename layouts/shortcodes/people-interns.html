@@ -16,6 +16,14 @@
   [id="interns"] [class*="max-w"] {
     max-width: 100% !important;
   }
+
+  #interns > .flex.flex-col > .mb-6 {
+    width: calc(100% - 2rem) !important;
+    max-width: 1310px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: left !important;
+  }
   
   /* Scroll animation styles */
   .people-card {
@@ -28,9 +36,46 @@
     opacity: 1;
     transform: translateY(0);
   }
+
+  .people-card h3 {
+    font-size: 1.3rem !important;
+    line-height: 1.35;
+    margin-top: 0 !important;
+    margin-bottom: 0.25rem !important;
+  }
+
+  .people-card .people-role {
+    margin-top: 0.35rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .people-photo-frame {
+    width: 95%;
+    aspect-ratio: 3 / 4;
+    margin: -0.125rem auto 0.6rem;
+    overflow: hidden;
+    border-radius: 0.375rem;
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+    align-self: center;
+  }
+
+  .people-photo-frame img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: inherit;
+  }
+
+  @media (max-width: 767px) {
+    .people-photo-frame {
+      max-width: 220px;
+    }
+  }
 </style>
-<div style="width: 100%; max-width: 100%; margin-left: auto; margin-right: auto; padding-left: 1rem; padding-right: 1rem;">
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+<div style="width: 100%; max-width: 1220px; margin-left: auto; margin-right: auto; padding-left: 1rem; padding-right: 1rem;">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
   {{ $filtered := slice }}
   {{ range site.Data.authors }}
     {{ if eq .category "Interns" }}
@@ -38,38 +83,39 @@
     {{ end }}
   {{ end }}
   {{ if eq (len $filtered) 0 }}
-      <div class="col-span-full py-12">
-        <p class="text-gray-600 dark:text-gray-400 mb-4">We are currently looking for interns to join our team.</p>
-        <a href="/contact/" class="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-blue-600 dark:bg-blue-500 rounded-lg hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors shadow-sm hover:shadow-md">
-          Contact
-          <svg class="w-4 h-4 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-          </svg>
-        </a>
-      </div>
+      <script>
+      (function() {
+        const section = document.getElementById("interns");
+        if (section) section.style.display = "none";
+      })();
+      </script>
   {{ else }}
   {{ range sort $filtered "order" }}
-      <div class="people-card bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
-        <div class="flex flex-col items-center text-center">
+      <div class="people-card h-full bg-white dark:bg-gray-800 rounded-lg shadow-md px-6 pt-0 pb-5">
+        <div class="flex h-full flex-col items-center text-center">
           {{ $image := "" }}
           {{ if .image }}
             {{ $image = printf "/media/authors/%s" .image }}
           {{ else }}
             {{ $image = printf "/media/authors/%s.jpg" .slug }}
           {{ end }}
-          <img src="{{ $image }}" alt="{{ .name.display }}" class="rounded-full object-cover" style="width: 180px; height: 180px; margin-bottom: 0.5rem;" onerror="this.src='/media/authors/me.jpg'">
-          <h3 class="text-xl font-semibold mb-1">{{ .name.display }}</h3>
-          <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">{{ .role }}</p>
-          <p class="text-sm text-gray-700 dark:text-gray-300 mb-4">{{ .bio }}</p>
+          <div class="people-photo-frame">
+            <img src="{{ $image }}" alt="{{ .name.display }}" loading="lazy" decoding="async" onerror="this.src='/media/authors/me.jpg'">
+          </div>
+          <h3 class="text-lg font-semibold mb-1">{{ .name.display }}</h3>
+          {{ $roleHTML := .role | default "" }}
+          {{ $roleHTML = replaceRE `\r?\n` "<br>" $roleHTML }}
+          {{ $roleHTML = replace $roleHTML "Lab Representative" "<span class=\"font-bold text-blue-600 dark:text-blue-400\">Lab Representative</span>" }}
+          <p class="people-role text-sm text-gray-600 dark:text-gray-400">{{ $roleHTML | safeHTML }}</p>
           {{ if .tags }}
-            <div class="flex flex-wrap gap-2 mb-4 justify-center">
+            <div class="flex flex-wrap gap-2 mb-3 justify-center">
               {{ range .tags }}
-                <span class="px-2 py-1 text-xs bg-gray-200 dark:bg-gray-700 rounded">{{ . }}</span>
+                <span class="px-2 py-1 text-xs rounded bg-blue-100 text-blue-800 dark:bg-blue-900/40 dark:text-blue-200">{{ . }}</span>
               {{ end }}
             </div>
           {{ end }}
           {{ if .links }}
-            <div class="flex gap-3">
+            <div class="mt-auto flex gap-3 pt-3">
               {{ range .links }}
                 <a href="{{ .url }}" class="text-gray-600 dark:text-gray-400 hover:text-primary-600" aria-label="{{ .label }}">
                   {{ if eq .icon "at-symbol" }}

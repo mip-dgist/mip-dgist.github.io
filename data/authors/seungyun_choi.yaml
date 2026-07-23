@@ -1,29 +1,28 @@
 schema: hugoblox/author/v1
-slug: hyobin_choi
+slug: seungyun_choi
 category: Interns
-order: 5
+order: 7
 name:
-  display: Hyobin Choi
-  given: Hyobin
+  display: Seungyun Choi
+  given: Seungyun
   family: Choi
 role: Intern
-# bio: Exploring multimodal perception and foundation model adaptation for physical AI systems
+# bio: My research interests include Multimodal AI, Vision-Language model.
 tags:
-  - Multimodal Learning
-  - Foundation Model Adaptation
-  - Physical AI
+  - Multimodal AI
+  - Vision-Language model
 links:
   - icon: at-symbol
-    url: mailto:hyobin01@dgist.ac.kr
+    url: mailto:sarah.johnson@example.com
     label: Email
   # - icon: brands/x
   #   url: https://x.com/sarahjohnson
   #   label: X (Twitter)
   - icon: brands/github
-    url: https://github.com/HYOBINCHOI
+    url: https://github.com/sarahjohnson
     label: GitHub
   - icon: brands/linkedin
-    url: https://www.linkedin.com/in/hyobinchoi/
+    url: https://www.linkedin.com/in/sarahjohnson
     label: LinkedIn
   - icon: academicons/google-scholar
     url: https://scholar.google.com/citations?user=sarahjohnson

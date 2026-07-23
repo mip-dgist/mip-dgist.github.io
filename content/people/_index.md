@@ -12,7 +12,7 @@ sections:
     content:
       title: Principal Investigator
       text: |
-        <div class="mb-2" style="border-bottom: 2px solid #3b82f6; max-width: 80%; margin-top: -1rem;"></div>
+        <div class="mb-2" style="border-bottom: 2px solid #3b82f6; width: calc(100% - 2rem) !important; max-width: 1310px !important; margin: -1rem auto 0 !important;"></div>
         {{< people-pi >}}
     design:
       spacing:
@@ -51,7 +51,7 @@ sections:
     content:
       title: Master Students
       text: |
-        <div class="mb-2" style="border-bottom: 2px solid #3b82f6; max-width: 80%; margin-top: -1rem;"></div>
+        <div class="mb-2" style="border-bottom: 2px solid #3b82f6; width: calc(100% - 2rem) !important; max-width: 1310px !important; margin: -1rem auto 0 !important;"></div>
         {{< people-master >}}
     design:
       spacing:
@@ -64,7 +64,7 @@ sections:
     content:
       title: Undergraduate Students
       text: |
-        <div class="mb-2" style="border-bottom: 2px solid #3b82f6; max-width: 80%; margin-top: -1rem;"></div>
+        <div class="mb-2" style="border-bottom: 2px solid #3b82f6; width: calc(100% - 2rem) !important; max-width: 1310px !important; margin: -1rem auto 0 !important;"></div>
         {{< people-interns >}}
     design:
       spacing:
