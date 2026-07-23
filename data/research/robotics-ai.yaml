@@ -3,6 +3,6 @@ title: Physical AI
 category: Robotics
 image: physical-ai.gif
 description: Advancing the frontier of Embodied AI by integrating multimodal perception with real-world robotic control to automate complex physical tasks.
-url: https://example.com/quantum-ml
+# url: https://example.com/  # 관련 페이지가 있으면 주석(#)을 지우고 URL을 넣으세요
 order: 1
 

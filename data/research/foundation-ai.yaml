@@ -3,6 +3,6 @@ title: Foundation Model
 category: Foundation Model
 description: We study how to adapt and fine-tune foundation models for domain-specific tasks, with a focus on efficient and robust transfer to areas such as medicine and robotics.
 image: foundation-ai.gif
-url: https://example.com/quantum-ml
+# url: https://example.com/  # 관련 페이지가 있으면 주석(#)을 지우고 URL을 넣으세요
 order: 2
 

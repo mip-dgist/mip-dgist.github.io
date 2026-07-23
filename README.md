@@ -1,35 +1,61 @@
-# [Hugo Landing Page Theme](https://github.com/HugoBlox/theme-landing-page)
+# MIP Lab @ DGIST — 연구실 홈페이지
 
-[![Screenshot](https://raw.githubusercontent.com/HugoBlox/theme-landing-page/main/.github/preview.webp)](https://hugoblox.com/templates/)
+DGIST **MIP Lab** (Multimodal AI · Robot Perception · Medical Imaging)의 공식 홈페이지 소스 코드입니다.
+[Hugo](https://gohugo.io/) + [HugoBlox](https://hugoblox.com/) 테마와 Tailwind CSS로 만들어졌으며,
+`main` 브랜치에 푸시하면 GitHub Actions가 자동으로 빌드해 GitHub Pages로 배포합니다.
 
-The Hugo **Landing Page Template** empowers you to easily create startup websites, marketing websites, and landing pages to accelerate your business growth.
+> **처음 참여하는 분은 먼저 [MANUAL.md](MANUAL.md)를 읽어주세요.** 설치부터 콘텐츠 편집, 배포까지
+> 단계별로 정리되어 있습니다. (SSH 키 설정은 [SSH_SETUP.md](SSH_SETUP.md) 참고)
 
-️**Trusted by 250,000+ creators, teams, and organizations.** Highly customizable via the integrated **no-code, block-based website builder**, making every site truly personalized ⭐⭐⭐⭐⭐
+## 기술 스택
 
-[![Get Started](https://img.shields.io/badge/-Get%20started-ff4655?style=for-the-badge)](https://hugoblox.com/templates/)
-[![Discord](https://img.shields.io/discord/722225264733716590?style=for-the-badge)](https://discord.com/channels/722225264733716590/742892432458252370/742895548159492138)  
-[![Twitter Follow](https://img.shields.io/twitter/follow/BuildLore?label=Follow%20on%20Twitter)](https://x.com/BuildLore)
+- **Hugo (extended)** — 정적 사이트 생성기
+- **HugoBlox landing-page 테마** — Hugo 모듈로 불러옴 (`go.mod`, `config/_default/module.yaml`)
+- **Tailwind CSS v4** — 스타일 (`assets/css/`, `package.json`)
+- **pnpm** — 프런트엔드 의존성 관리
+- **GitHub Actions + GitHub Pages** — 자동 배포 (`.github/workflows/deploy.yml`)
 
-[Check out the latest demo](https://theme-landing-page.netlify.app) of what you'll get in less than 10 minutes, or [view the showcase](https://hugoblox.com/creators/).
+## 디렉터리 구조 (핵심만)
 
-The integrated [**Hugo Blox**](https://hugoblox.com) website builder and CMS makes it easy to create a beautiful website for free. Edit your site in the CMS (or your favorite editor), generate it with [Hugo](https://github.com/gohugoio/hugo), and deploy with GitHub or Netlify. Customize anything on your site with widgets, light/dark themes, and language packs.
+```
+config/_default/     사이트 설정 (hugo.yaml, params.yaml, menus.yaml, languages.yaml)
+content/             페이지별 콘텐츠 (_index.md, people/, research/, news/, publications/, contact/)
+data/                실제 데이터(주로 여기를 편집)
+  authors/           구성원 프로필 (한 명당 yaml 하나, john-doe.yaml = 템플릿)
+  news/news.yaml     뉴스/소식
+  research/          연구 분야 카드
+  publications/      논문 목록
+layouts/shortcodes/  data/ 내용을 카드로 렌더하는 템플릿(HTML)
+static/media/        이미지·미디어 (authors/, research/ 등)
+assets/              CSS, 사이트에서 처리하는 에셋
+.github/workflows/   배포 자동화
+```
 
-- 👉 [**Get Started**](https://hugoblox.com/templates/)
-- 📚 [View the **documentation**](https://docs.hugoblox.com/)
-- 💬 [Chat with the **Hugo Blox Builder community**](https://discord.gg/z8wNYzb) or [**Hugo community**](https://discourse.gohugo.io)
-- ⬇️ **Automatically import citations from BibTeX** with the [Hugo Academic CLI](https://github.com/GetRD/academic-file-converter)
-- 🐦 Share your new site with the community: [@BuildLore](https://x.com/BuildLore) [@GeorgeCushen](https://x.com/GeorgeCushen) [#MadeWithHugoBlox](https://x.com/search?q=%23MadeWithHugoBlox&src=typed_query)
-- 🗳 [Take the survey and help us improve #OpenSource](https://forms.gle/NioD9VhUg7PNmdCAA)
-- 🚀 [Contribute improvements](https://github.com/HugoBlox/hugo-blox-builder/blob/main/CONTRIBUTING.md) or [suggest improvements](https://github.com/HugoBlox/hugo-blox-builder/issues)
-- ⬆️ **Updating?** View the [Update Guide](https://docs.hugoblox.com/) and [Release Notes](https://github.com/HugoBlox/hugo-blox-builder/releases)
+대부분의 콘텐츠 수정은 **`data/` 폴더의 YAML 파일**만 고치면 됩니다. 자세한 편집 방법은
+[MANUAL.md](MANUAL.md)에 있습니다.
 
-## We ask you, humbly, to support this open source movement
+## 빠른 시작
 
-Today we ask you to defend the open source independence of the Hugo Blox Builder and themes 🐧
+```bash
+# 1) 사전 준비: Hugo(extended)와 pnpm 설치
+brew install hugo
+brew install pnpm            # 또는: npm install -g pnpm
 
-We're an open source movement that depends on your support to stay online and thriving, but 99.9% of our creators don't give; they simply look the other way.
+# 2) 저장소 클론
+git clone git@github.com:mip-dgist/mip-dgist.github.io.git
+cd mip-dgist.github.io
 
-### [❤️ Click here to become a GitHub Sponsor, unlocking awesome perks such as _exclusive academic templates and widgets_](https://github.com/sponsors/gcushen)
+# 3) 의존성 설치
+pnpm install
 
+# 4) 로컬 서버 실행 → 브라우저에서 http://localhost:1313 열기
+hugo server        # 또는: pnpm dev
+```
 
-<!-- hugo server -D -->
+파일을 저장하면 브라우저가 자동으로 새로고침됩니다.
+
+## 배포
+
+- `main` 브랜치에 푸시하는 순간 GitHub Actions가 빌드 후 GitHub Pages에 배포합니다.
+- **`main`은 곧 라이브 사이트입니다.** 직접 푸시하지 말고 브랜치를 만들어 작업한 뒤 Pull Request로
+  합치는 것을 권장합니다. 자세한 협업 규칙은 [MANUAL.md](MANUAL.md#5-git-협업-워크플로)를 보세요.
