@@ -6,7 +6,8 @@ name:
   display: Sangjin Lee
   given: Sangjin
   family: Lee
-role: Master Student 
+role: Master Student
+is_lab_representative: true
 # bio: My research interests include Multimodal AI, Robot Planning.
 tags:
   - Multimodal AI
