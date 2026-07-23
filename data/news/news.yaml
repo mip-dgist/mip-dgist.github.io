@@ -28,6 +28,16 @@
   title: "New students joined MIP Lab (Spring 2026)"
   description: "We welcome a new MS student (Sangjin Lee) and new undergraduate students to MIP Lab."
 
+- date: 2026-02-21
+  type: publication
+  title: "DINOde accepted to ECCV 2026"
+  description: "Our paper 「DINOde: Continuous Vision-Text Alignment for Open-Vocabulary Semantic Segmentation」 has been accepted to ECCV 2026. Authors: Sung-Hoon Yoon*, Hoyong Kwon*, Changgyoon Oh*, and Kuk-Jin Yoon."
+
+- date: 2026-02-21
+  type: publication
+  title: "TrailBlazer accepted to COLM 2026"
+  description: "Our paper 「TrailBlazer: History-Guided Reinforcement Learning for Black-Box LLM Jailbreaking」 has been accepted to COLM 2026. Authors: Sung-Hoon Yoon*, Ruizhi Qian*, Minda Zhao*, Weiyue Li*, and Mengyu Wang."
+
 - date: 2025-02-21
   type: publication
   title: "A paper accepted to CVPR 2026"

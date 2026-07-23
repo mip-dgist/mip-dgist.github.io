@@ -1,4 +1,25 @@
 - slug: deltavelocity-2026
+  title: "DINOde: Continuous Vision-Text Alignment for Open-Vocabulary Semantic Segmentation"
+  authors:
+    - Sung-Hoon Yoon*
+    - Hoyong Kwon*
+    - Changgyoon Oh*
+    - Kuk-Jin Yoon
+  venue: ECCV
+  date: 2026-02-21
+
+- slug: deltavelocity-2026
+  title: "TrailBlazer: History-Guided Reinforcement Learning for Black-Box LLM Jailbreaking"
+  authors:
+    - Sung-Hoon Yoon*
+    - Ruizhi Qian*
+    - Minda Zhao*
+    - Weiyue Li*
+    - Mengyu Wang
+  venue: COLM
+  date: 2026-02-21
+
+- slug: deltavelocity-2026
   title: "Delta Velocity Rectified Flow for Text-to-Image Editing"
   authors:
     - Gaspard Beaudouin
