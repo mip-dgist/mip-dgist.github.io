@@ -39,22 +39,27 @@
     transform: translateY(0);
   }
 
+  .people-card > div {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
   .people-card h3 {
-    font-size: 1.3rem !important;
+    font-size: 1.125rem !important;
     line-height: 1.35;
     margin-top: 0 !important;
     margin-bottom: 0.25rem !important;
   }
 
   .people-card .people-role {
-    margin-top: 0.35rem !important;
-    margin-bottom: 1rem !important;
+    margin-top: 0.25rem !important;
+    margin-bottom: 0.75rem !important;
   }
 
   .people-photo-frame {
-    width: 95%;
+    width: 88%;
     aspect-ratio: 3 / 4;
-    margin: -0.125rem auto 0.6rem;
+    margin: 0.4rem auto 0.7rem !important;
     overflow: hidden;
     border-radius: 0.375rem;
     -webkit-mask-image: -webkit-radial-gradient(white, black);
@@ -70,14 +75,39 @@
     border-radius: inherit;
   }
 
+  .people-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    min-height: 2.5rem;
+    margin-top: auto;
+    padding: 0.85rem 0 0.2rem;
+  }
+
+  .people-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.4rem;
+    height: 1.4rem;
+    line-height: 1;
+  }
+
+  .people-links svg {
+    display: block;
+    width: 1.15rem;
+    height: 1.15rem;
+  }
+
   @media (max-width: 767px) {
     .people-photo-frame {
       max-width: 220px;
     }
   }
 </style>
-<div style="width: 100%; max-width: 1220px; margin-left: auto; margin-right: auto; padding-left: 1rem; padding-right: 1rem;">
-  <div class="flex justify-start mt-8">
+<div style="width: 100%; max-width: 1180px; margin-left: auto; margin-right: auto; padding-left: 1rem; padding-right: 1rem;">
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-8">
   {{ $filtered := slice }}
   {{ range site.Data.authors }}
     {{ if eq .category "PI" }}
@@ -85,7 +115,7 @@
     {{ end }}
   {{ end }}
   {{ range sort $filtered "order" }}
-      <div class="people-card h-full bg-white dark:bg-gray-800 rounded-lg shadow-md px-6 pt-0 pb-5" style="width: 100%; max-width: 287px;">
+      <div class="people-card h-full bg-white dark:bg-gray-800 rounded-lg shadow-md px-4 pt-0 pb-5">
         <div class="flex h-full flex-col items-center text-center">
           {{ $image := "" }}
           {{ if .image }}
@@ -109,7 +139,7 @@
             </div>
           {{ end }}
           {{ if .links }}
-            <div class="mt-auto flex gap-3 pt-3">
+            <div class="people-links">
               {{ range .links }}
                 <a href="{{ .url }}" class="text-gray-600 dark:text-gray-400 hover:text-primary-600" aria-label="{{ .label }}">
                   {{ if eq .icon "at-symbol" }}

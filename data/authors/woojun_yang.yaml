@@ -9,8 +9,9 @@ name:
 role: Intern
 # bio: My research interests include Vision-Language-Action(VLA) model and Medical AI.
 tags:
-  - Vision-Language-Action(VLA) model
   - Medical AI
+  - Vision-Language-Action(VLA) model
+
 links:
   - icon: at-symbol
     url: mailto:yangwj@dgist.ac.kr

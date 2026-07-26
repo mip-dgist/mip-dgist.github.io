@@ -1,28 +1,29 @@
 schema: hugoblox/author/v1
-slug: seungyun_choi
-category: Interns
-order: 7
+slug: hyeonna_choi
+category: Master Students
+order: 6
 name:
-  display: Seungyun Choi
-  given: Seungyun
+  display: Hyeonna Choi
+  given: Hyeonna
   family: Choi
-role: Intern
-# bio: My research interests include Multimodal AI, Vision-Language model.
+role: Master Student
+# bio: My research interests include Vision-Language-Action(VLA) model and Medical AI.
 tags:
+  - Physical AI
   - Multimodal AI
-  - Vision-Language model
+  - Self-Driving Laboratories
 links:
   - icon: at-symbol
-    url: mailto:sarah.johnson@example.com
+    url: mailto:yangwj@dgist.ac.kr
     label: Email
   # - icon: brands/x
   #   url: https://x.com/sarahjohnson
   #   label: X (Twitter)
   # - icon: brands/github
-  #   url: https://github.com/sarahjohnson
+  #   url: https://github.com/spacenship
   #   label: GitHub
   # - icon: brands/linkedin
-  #   url: https://www.linkedin.com/in/sarahjohnson
+  #   url: https://www.linkedin.com/in/woojun-yang-8b29b5280/
   #   label: LinkedIn
   # - icon: academicons/google-scholar
   #   url: https://scholar.google.com/citations?user=sarahjohnson

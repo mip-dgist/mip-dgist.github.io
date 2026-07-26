@@ -26,7 +26,7 @@ main:
     weight: 38
   - name: Contact
     url: /contact/
-    weight: 39
+    weight: 40
   # - name: Resources
   #   weight: 40
   #   hasChildren: true
