@@ -1,54 +1,63 @@
+- date: 2026-07-08
+  type: publication
+  title: "A paper accepted to COLM 2026"
+  description: "A paper from MIP Lab is accepted to COLM 2026. <TrailBlazer: History-Guided Reinforcement Learning for Black-Box LLM Jailbreaking, Sung-Hoon Yoon*, Ruizhi Qian*, Minda Zhao*, Weiyue Li*, and Mengyu Wang>"
+  thumbnail: "/media/news/colm-2026.png"
+  home_featured: true
+
+- date: 2026-06-17
+  type: publication
+  title: "A paper accepted to ECCV 2026"
+  description: "A paper from MIP Lab is accepted to ECCV 2026. <DINOde: Continuous Vision-Text Alignment for Open-Vocabulary Semantic Segmentation, Sung-Hoon Yoon*, Hoyong Kwon*, Changgyoon Oh*, and Kuk-Jin Yoon>"
+  thumbnail: "/media/news/eccv-2026.png"
+  home_featured: true
+
 - date: 2026-05-20
   type: award
   title: "1st place at ICRA 2026 Workshop on Field Robotics (GOOSE 2D Fine-Grained Semantic Segmentation Challenge)"
-  description: "MIP Lab (Jaeil Park, Hyobin Choi, Sangjin Lee) placed 1st in the competition track of the ICRA 2026 Workshop on Field Robotics — GOOSE 2D Fine-Grained Semantic Segmentation Challenge, focusing on robust scene understanding in unstructured outdoor and off-road environments. Co-advised by Dr. Hyungtae Lim (MIT SPARK Lab)."
-
-
+  description: "MIP Lab members Jaeil Park, Hyobin Choi, and Sangjin Lee won 1st place in the ICRA 2026 GOOSE 2D Fine-Grained Semantic Segmentation Challenge. Co-advised by Dr. Hyungtae Lim (MIT SPARK Lab)."
+  url: "/news/goose-challenge-2026/"
+  thumbnail: "/news/goose-challenge-2026/icra_challenge2.jpg"
+  home_featured: true
+  
 - date: 2026-04-30
   type: grant
   title: "Selected for MSIT Future Convergence Pioneer Project — Humanoid Swarm Autonomous Operation"
   description: "MIP Lab has been selected for the MSIT-sponsored 「2026 Future Convergence Science & Technology Development Project (Future Promising Convergence Pioneer)」 — 'Development of Group Perception-Understanding-Cooperation based Autonomous Operation Technology for Humanoid Swarm Tasks'."
-
+  thumbnail: "/media/news/msit-2026.jpg"
 
 - date: 2026-04-24
   type: grant
   title: "Selected for NIPA Multimodal Camera-based On-device AI Drone Project"
   description: "MIP Lab has been selected for the NIPA-sponsored 「Development and Demonstration of AIoT Service for Early Detection and Response to Water Quality Anomalies Using Multimodal Camera-based On-device AI Drones」 project (500M KRW)."
-
+  thumbnail: "/media/news/nipa-2026.png"
 
 - date: 2026-04-24
   type: grant
   title: "Selected as Participant for Advanced GPU Utilization Support Program"
   description: "MIP Lab has been selected for the 「Advanced GPU Utilization Support Program」."
-
-
+  thumbnail: "/media/news/msit-2026.jpg"
 
 - date: 2026-02-23
   type: admission
   title: "New students joined MIP Lab (Spring 2026)"
   description: "We welcome a new MS student (Sangjin Lee) and new undergraduate students to MIP Lab."
-
+  thumbnail: "/media/authors/sangjin_lee.jpg"
+  
 - date: 2026-02-21
-  type: publication
-  title: "DINOde accepted to ECCV 2026"
-  description: "Our paper 「DINOde: Continuous Vision-Text Alignment for Open-Vocabulary Semantic Segmentation」 has been accepted to ECCV 2026. Authors: Sung-Hoon Yoon*, Hoyong Kwon*, Changgyoon Oh*, and Kuk-Jin Yoon."
-
-- date: 2026-02-21
-  type: publication
-  title: "TrailBlazer accepted to COLM 2026"
-  description: "Our paper 「TrailBlazer: History-Guided Reinforcement Learning for Black-Box LLM Jailbreaking」 has been accepted to COLM 2026. Authors: Sung-Hoon Yoon*, Ruizhi Qian*, Minda Zhao*, Weiyue Li*, and Mengyu Wang."
-
-- date: 2025-02-21
   type: publication
   title: "A paper accepted to CVPR 2026"
   description: "A paper from MIP Lab is accepted to CVPR 2026. <Delta velocity rectified flow for text-to-image editing, Gaspard Beaudouin, Minghan Li, Jaeyeon Kim, Sung-Hoon Yoon*, Mengyu Wang*>"
+  thumbnail: "/media/news/cvpr-2026.png"
+  home_featured: true
 
 
 - date: 2025-12-30
   type: grant
   title: "Selected as Beta Service Participant for Advanced GPU Utilization Support Program"
   description: "MIP Lab has been selected as a beta service participant for the 「Advanced GPU Utilization Support Program」."
-
+  thumbnail: "/media/news/msit-2026.jpg"
+  
 - date: 2025-12-18
   type: service
   title: "MIP Lab has launched 🚀"

@@ -9,9 +9,10 @@ name:
 role: Intern
 # bio: My research interests include Vision-Language-Action(VLA) model and Medical AI.
 tags:
-  - Vision-Language Models
   - 3D generation
   - Text-to-3D
+  - Vision-Language Models
+
 links:
   - icon: at-symbol
     url: mailto:yangwj@dgist.ac.kr
@@ -19,13 +20,13 @@ links:
   # - icon: brands/x
   #   url: https://x.com/sarahjohnson
   #   label: X (Twitter)
-  - icon: brands/github
-    url: https://github.com/spacenship
-    label: GitHub
-  - icon: brands/linkedin
-    url: https://www.linkedin.com/in/woojun-yang-8b29b5280/
-    label: LinkedIn
-  - icon: academicons/google-scholar
-    url: https://scholar.google.com/citations?user=sarahjohnson
-    label: Google Scholar
+  # - icon: brands/github
+  #   url: https://github.com/spacenship
+  #   label: GitHub
+  # - icon: brands/linkedin
+  #   url: https://www.linkedin.com/in/woojun-yang-8b29b5280/
+  #   label: LinkedIn
+  # - icon: academicons/google-scholar
+  #   url: https://scholar.google.com/citations?user=sarahjohnson
+  #   label: Google Scholar
 

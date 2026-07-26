@@ -9,9 +9,9 @@ name:
 role: Intern
 # bio: Exploring multimodal perception and foundation model adaptation for physical AI systems
 tags:
-  - Multimodal Learning
-  - Foundation Model Adaptation
-  - Physical AI
+  - "Egocentric Vision"
+
+  - "Embodied AI"
 links:
   - icon: at-symbol
     url: mailto:hyobin01@dgist.ac.kr

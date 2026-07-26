@@ -10,6 +10,7 @@ role: Master Student
 # bio: My research interests focus on 3D/4D scene reconstruction and generative models for creating and editing geometrically consistent dynamic scenes.
 tags:
   - Gaussian Splatting
+  
   - 4D reconstruction
   # - Generative Models
 links:

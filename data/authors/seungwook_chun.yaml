@@ -1,28 +1,29 @@
 schema: hugoblox/author/v1
-slug: seungyun_choi
+slug: seungwook_chun
 category: Interns
-order: 7
+order: 8
 name:
-  display: Seungyun Choi
-  given: Seungyun
-  family: Choi
+  display: Seungwook Chun
+  given: Seungwook
+  family: Chun
 role: Intern
-# bio: My research interests include Multimodal AI, Vision-Language model.
+# bio: My research interests include Vision-Language-Action(VLA) model and Medical AI.
 tags:
-  - Multimodal AI
-  - Vision-Language model
+  - Motion Planning
+  - VLA-based Manipulation
+
 links:
   - icon: at-symbol
-    url: mailto:sarah.johnson@example.com
+    url: mailto:yangwj@dgist.ac.kr
     label: Email
   # - icon: brands/x
   #   url: https://x.com/sarahjohnson
   #   label: X (Twitter)
   # - icon: brands/github
-  #   url: https://github.com/sarahjohnson
+  #   url: https://github.com/spacenship
   #   label: GitHub
   # - icon: brands/linkedin
-  #   url: https://www.linkedin.com/in/sarahjohnson
+  #   url: https://www.linkedin.com/in/woojun-yang-8b29b5280/
   #   label: LinkedIn
   # - icon: academicons/google-scholar
   #   url: https://scholar.google.com/citations?user=sarahjohnson
