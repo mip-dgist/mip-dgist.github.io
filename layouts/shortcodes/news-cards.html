@@ -253,6 +253,10 @@
     transform: translateY(-0.75rem);
   }
 
+  .news-card-layout.news-card-layout-colm .news-card-content {
+    margin-left: -40px;
+  }
+
   .news-card-plain .news-card-content h3 {
     margin-top: 2rem !important;
     margin-bottom: 0.75rem !important;
@@ -279,6 +283,10 @@
 
     .news-card-layout {
       flex-direction: column;
+    }
+
+    .news-card-layout.news-card-layout-colm .news-card-content {
+      margin-left: 0;
     }
 
     .news-thumbnail {
@@ -380,7 +388,7 @@
             </span>
           {{ end }}
         </div>
-        <div class="{{ if $item.thumbnail }}news-card-layout{{ else }}news-card-plain{{ end }}">
+        <div class="{{ if $item.thumbnail }}news-card-layout{{ if eq $item.thumbnail "/media/news/colm-2026.png" }} news-card-layout-colm{{ end }}{{ else }}news-card-plain{{ end }}">
           {{ with $item.thumbnail }}
             <img src="{{ . | relURL }}" alt="{{ $itemTitle }}" class="news-thumbnail{{ if or (eq . "/media/authors/sangjin_lee.jpg") (eq . "/media/news/cvpr-2026.png") }} news-thumbnail-portrait{{ end }}{{ if eq . "/media/news/cvpr-2026.png" }} news-thumbnail-cvpr{{ end }}{{ if eq . "/media/authors/sangjin_lee.jpg" }} news-thumbnail-student{{ end }}{{ if or (eq . "/media/news/colm-2026.png") (eq . "/media/news/eccv-2026.png") }} news-thumbnail-natural{{ end }}{{ if eq . "/media/news/colm-2026.png" }} news-thumbnail-colm{{ end }}" loading="lazy" decoding="async">
           {{ end }}
