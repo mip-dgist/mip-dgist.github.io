@@ -1,0 +1,58 @@
+<style>
+  #contact .mb-6{display:none}
+  .mip-contact{width:100vw;max-width:none;margin-left:calc(50% - 50vw);color:#172033}
+  .mip-contact *{box-sizing:border-box}
+  .mip-contact__inner{width:min(1160px,calc(100% - 40px));margin:0 auto}
+  .mip-contact__hero{padding:64px 0 38px;border-bottom:1px solid #e2e6ec;background:#f7f8fa}
+  .mip-contact__hero h1{margin:0;font-size:clamp(2.2rem,5vw,3.65rem);line-height:1.08;letter-spacing:-.045em}
+  .mip-contact__hero p{margin:16px 0 0;color:#5f6979;font-size:1.05rem}
+  .mip-contact__main{padding:34px 0 72px}
+  .mip-contact__intro{max-width:1100px;margin:0 0 34px;color:#5f6979;font-size:.98rem;line-height:1.8}
+  .mip-contact__intro p{margin:0 0 8px}
+  .mip-contact__grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+  .mip-contact__card{min-height:190px;padding:30px 32px;border:1px solid #e2e6ec;border-radius:10px;background:#fff;box-shadow:0 5px 18px rgb(23 32 51/.04)}
+  .mip-contact__card h2{display:flex;align-items:center;gap:12px;margin:0 0 20px;font-size:1.08rem}
+  .mip-contact__icon{display:grid;place-items:center;width:28px;height:28px;color:#2456a6}
+  .mip-contact__icon svg{width:23px;height:23px}
+  .mip-contact__row{display:grid;grid-template-columns:116px 1fr;gap:12px;margin:7px 0;font-size:.95rem;line-height:1.55}
+  .mip-contact__address{color:#313a49;font-size:.95rem;line-height:1.7}
+  .mip-contact a{color:#2456a6;text-decoration:none}
+  .mip-contact__socials{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}
+  .mip-contact__socials a{padding:7px 11px;border:1px solid #e2e6ec;border-radius:7px;color:#374151;font-size:.82rem;font-weight:650}
+  .mip-contact__location{padding:58px 0 72px;border-top:1px solid #e2e6ec;background:#f7f8fa}
+  .mip-contact__location h2{margin:0 0 32px;text-align:center;font-size:1.85rem}
+  .mip-contact__location-grid{display:grid;grid-template-columns:minmax(300px,.95fr) minmax(420px,1.15fr);gap:40px;align-items:stretch}
+  .mip-contact__location-card{align-self:stretch;padding:30px;border:1px solid #e2e6ec;border-radius:10px;background:#fff;box-shadow:0 5px 18px rgb(23 32 51/.05)}
+  .mip-contact__location-card h3{margin:0 0 14px;font-size:1.22rem}
+  .mip-contact__photo-button{display:block;width:100%;padding:0;border:0;background:transparent;cursor:zoom-in}
+  .mip-contact__lab-photo{display:block;width:100%;height:auto;aspect-ratio:2/1;margin:14px 0 0!important;border-radius:8px;object-fit:cover;object-position:center 62%}
+  .mip-contact__map{min-height:315px;overflow:hidden;border:1px solid #e2e6ec;border-radius:10px;background:#e8ebef}
+  .mip-contact__map iframe{display:block;width:100%;height:100%;min-height:315px;border:0}
+  .mip-contact__photo-dialog{width:min(94vw,1500px);max-width:none;padding:0;border:0;border-radius:12px;background:transparent;box-shadow:0 24px 70px rgb(0 0 0/.38)}
+  .mip-contact__photo-dialog[open]{position:fixed;inset:50% auto auto 50%;display:flex;align-items:center;justify-content:center;margin:0;transform:translate(-50%,-50%)}
+  .mip-contact__photo-dialog::backdrop{background:rgb(0 0 0/.82)}
+  .mip-contact__photo-dialog img{display:block;width:auto;max-width:100%;height:auto;max-height:90vh;margin:auto;object-fit:contain;border-radius:12px}
+  .mip-contact__photo-close{position:absolute;top:12px;right:12px;display:grid;place-items:center;width:42px;height:42px;border:0;border-radius:50%;background:rgb(0 0 0/.7);color:#fff;font-size:28px;cursor:pointer}
+  @media(max-width:800px){.mip-contact__hero{padding:46px 0 30px}.mip-contact__main{padding:26px 0 50px}.mip-contact__grid,.mip-contact__location-grid{grid-template-columns:1fr}.mip-contact__location-grid{gap:20px}}
+  @media(max-width:520px){.mip-contact__inner{width:min(100% - 28px,1160px)}.mip-contact__card,.mip-contact__location-card{padding:24px 21px}.mip-contact__row{grid-template-columns:1fr;gap:1px}}
+</style>
+<div class="mip-contact">
+  <header class="mip-contact__hero"><div class="mip-contact__inner"><h1>Contact</h1><p>Get in touch with MIP Lab</p></div></header>
+  <main class="mip-contact__main"><div class="mip-contact__inner">
+    <div class="mip-contact__intro">
+      <p>MIP 랩에서는 열정적으로 연구하실 학생들(석사과정, 박사과정 및 학부 연구생)을 모집하고 있습니다. 로봇, 의료, 자율주행 시스템 등의 기반이 되는 Multimodal (Vision-Language) AI를 연구하고 싶으시다면 언제든 편하게 연락해 주세요.</p>
+      <p>The MIP Lab is seeking passionate and motivated students (M.S./Ph.D. students and undergraduate interns). When emailing, please include a brief description of your research interests, your CV, and your transcript.</p>
+    </div>
+    <div class="mip-contact__grid">
+      <article class="mip-contact__card"><h2><span class="mip-contact__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.8 19.8 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.8 19.8 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.12.9.33 1.78.62 2.63a2 2 0 01-.45 2.11L8 9.73a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.85.29 1.73.5 2.63.62A2 2 0 0122 16.92z"/></svg></span>Phone</h2><div class="mip-contact__row"><strong>PI Office</strong><a href="tel:+82537856347">+82-53-785-6347</a></div></article>
+      <article class="mip-contact__card"><h2><span class="mip-contact__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18M6 21V4a1 1 0 011-1h10a1 1 0 011 1v17M9 7h2m2 0h2M9 11h2m2 0h2M9 15h2m2 0h2"/></svg></span>Address</h2><div class="mip-contact__address">DGIST, 333 Techno Jungang-daero, Hyeonpung-eup,<br>Dalseong-gun, Daegu, Republic of Korea</div><div class="mip-contact__row"><strong>PI Office</strong><span>E7 Bldg · L11</span></div><div class="mip-contact__row"><strong>Lab Office</strong><span>R7 Bldg · 511</span></div></article>
+      <article class="mip-contact__card"><h2><span class="mip-contact__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>Email</h2><div class="mip-contact__row"><strong>Professor</strong><a href="mailto:shyoon@dgist.ac.kr">shyoon@dgist.ac.kr</a></div></article>
+      <article class="mip-contact__card"><h2>Connect with Us</h2><div class="mip-contact__address">Follow the latest research and updates from MIP Lab.</div><div class="mip-contact__socials">{{ range site.Data.authors }}{{ if .is_owner }}{{ range .links }}{{ if or (eq .icon "brands/github") (eq .icon "brands/linkedin") (eq .icon "academicons/google-scholar") }}<a href="{{ .url }}" target="_blank" rel="noopener">{{ .label }}</a>{{ end }}{{ end }}{{ end }}{{ end }}</div></article>
+    </div>
+  </div></main>
+  <section class="mip-contact__location"><div class="mip-contact__inner"><h2>Location</h2><div class="mip-contact__location-grid">
+    <div class="mip-contact__location-card"><h3>DGIST MIP Lab</h3><button class="mip-contact__photo-button" type="button" aria-label="Enlarge DGIST MIP Lab photo" onclick="document.getElementById('lab-photo-dialog').showModal()"><img class="mip-contact__lab-photo" src="/media/contact/lab.jpeg" alt="DGIST MIP Lab interior" loading="lazy"></button></div>
+    <div class="mip-contact__map"><iframe src="https://www.google.com/maps?q=35.70631,128.4540&amp;hl=en&amp;z=16&amp;output=embed" title="DGIST MIP Lab location" allowfullscreen loading="lazy"></iframe></div>
+  </div></div></section>
+  <dialog class="mip-contact__photo-dialog" id="lab-photo-dialog" onclick="if(event.target===this)this.close()"><button class="mip-contact__photo-close" type="button" aria-label="Close enlarged photo" onclick="this.closest('dialog').close()">&times;</button><img src="/media/contact/lab.jpeg" alt="DGIST MIP Lab interior enlarged"></dialog>
+</div>

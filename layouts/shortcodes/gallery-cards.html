@@ -1,0 +1,94 @@
+<style>
+  #gallery .mb-6{display:none}
+  .mip-gallery{width:100vw;max-width:none;margin-left:calc(50% - 50vw);color:#172033}
+  .mip-gallery *{box-sizing:border-box}
+  .mip-gallery__inner{width:min(1200px,calc(100% - 40px));margin:0 auto}
+  .mip-gallery__hero{padding:34px 0 36px;border-bottom:1px solid #e3e6ea;background:#f7f8fa}
+  .mip-gallery__hero .mip-gallery__inner{width:100%;max-width:none;padding:0 28px}
+  .mip-gallery__hero h1{margin:0;font-size:2rem;line-height:1.2;letter-spacing:-.025em}
+  .mip-gallery__hero p{margin:14px 0 0;color:#606a79;font-size:1rem}
+  .mip-gallery__content{padding:64px 0 76px}
+  .mip-gallery__controls{width:min(650px,100%);margin:0 auto 38px}
+  .mip-gallery__search{width:100%;padding:9px 18px;border:1px solid #d6dae0;border-radius:999px;background:#fff;color:#172033;font:inherit;font-size:.95rem;outline:none}
+  .mip-gallery__search:focus{border-color:#3b82f6;box-shadow:0 0 0 3px rgb(59 130 246/.16)}
+  .mip-gallery__filters{display:flex;flex-wrap:wrap;justify-content:center;gap:9px;margin-top:18px}
+  .mip-gallery__filter{padding:5px 11px;border:1px solid #d6dae0;border-radius:5px;background:#fff;color:#4b5563;font:inherit;font-size:.82rem;cursor:pointer}
+  .mip-gallery__filter:hover{border-color:#3b82f6}
+  .mip-gallery__filter.is-active{border-color:#3b82f6;background:#3b82f6;color:#fff}
+  .mip-gallery__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+  .mip-gallery__card{position:relative;display:block;aspect-ratio:4/3;overflow:hidden;padding:0;border:0;border-radius:10px;background:#e5e7eb;color:#fff;text-align:left;cursor:zoom-in;box-shadow:0 8px 22px rgb(15 23 42/.08)}
+  .mip-gallery__card[hidden]{display:none}
+  .mip-gallery__card img{width:100%;height:100%;margin:0;object-fit:cover;transition:transform .35s ease}
+  .mip-gallery__card:hover img{transform:scale(1.045)}
+  .mip-gallery__overlay{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:22px;background:linear-gradient(180deg,transparent 34%,rgb(4 10 22/.82))}
+  .mip-gallery__overlay h2{margin:0 0 5px;color:#fff;font-size:1.18rem;line-height:1.25}
+  .mip-gallery__overlay p{margin:0 0 10px;color:rgb(255 255 255/.9);font-size:.9rem}
+  .mip-gallery__meta{display:flex;flex-wrap:wrap;gap:7px}
+  .mip-gallery__meta span{padding:4px 8px;border-radius:4px;background:rgb(0 0 0/.68);color:#fff;font-size:.75rem}
+  .mip-gallery__empty{display:none;padding:36px;text-align:center;color:#6b7280}
+  .mip-gallery__dialog{width:min(94vw,1500px);max-width:none;padding:0;border:0;border-radius:12px;overflow:hidden;background:#080b10;box-shadow:0 25px 80px rgb(0 0 0/.45)}
+  .mip-gallery__dialog[open]{position:fixed;inset:50% auto auto 50%;display:flex;align-items:center;justify-content:center;margin:0;transform:translate(-50%,-50%)}
+  .mip-gallery__dialog::backdrop{background:rgb(0 0 0/.84)}
+  .mip-gallery__dialog img{display:block;width:auto;max-width:100%;height:auto;max-height:90vh;margin:auto;object-fit:contain;object-position:center}
+  .mip-gallery__close{position:absolute;z-index:2;top:12px;right:12px;display:grid;place-items:center;width:42px;height:42px;border:0;border-radius:50%;background:rgb(0 0 0/.72);color:#fff;font-size:28px;cursor:pointer}
+  @media(max-width:900px){.mip-gallery__grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  @media(max-width:600px){.mip-gallery__inner{width:min(100% - 28px,1200px)}.mip-gallery__hero{padding:28px 0 30px}.mip-gallery__hero .mip-gallery__inner{padding:0 20px}.mip-gallery__content{padding:42px 0 56px}.mip-gallery__grid{grid-template-columns:1fr}}
+</style>
+<div class="mip-gallery">
+  <header class="mip-gallery__hero"><div class="mip-gallery__inner"><h1>Gallery</h1><p>Lab life, events, and research highlights</p></div></header>
+  <main class="mip-gallery__content"><div class="mip-gallery__inner">
+    <div class="mip-gallery__controls">
+      <input class="mip-gallery__search" id="gallery-search" type="search" placeholder="Search gallery..." aria-label="Search gallery">
+      <div class="mip-gallery__filters" aria-label="Gallery categories">
+        <button class="mip-gallery__filter is-active" type="button" data-category="all">All</button>
+        <button class="mip-gallery__filter" type="button" data-category="lab life">Lab Life</button>
+        <button class="mip-gallery__filter" type="button" data-category="conference">Conferences</button>
+      </div>
+    </div>
+    <div class="mip-gallery__grid">
+      {{ range site.Data.gallery.gallery.items }}
+      <button class="mip-gallery__card" type="button" data-title="{{ lower .title }}" data-subtitle="{{ lower .subtitle }}" data-category="{{ lower .category }}" data-image="{{ .image }}" aria-label="Enlarge {{ .title }}">
+        <img src="{{ .image }}" alt="{{ .title }}" loading="lazy" decoding="async">
+        <span class="mip-gallery__overlay"><h2>{{ .title }}</h2><p>{{ .subtitle }}</p><span class="mip-gallery__meta"><span>{{ .date }}</span><span>{{ .category }}</span><span>{{ .location }}</span></span></span>
+      </button>
+      {{ end }}
+    </div>
+    <p class="mip-gallery__empty" id="gallery-empty">No gallery items found.</p>
+  </div></main>
+  <dialog class="mip-gallery__dialog" id="gallery-dialog"><button class="mip-gallery__close" type="button" aria-label="Close enlarged image">&times;</button><img src="" alt=""></dialog>
+</div>
+<script>
+(()=>{
+  const search=document.getElementById('gallery-search');
+  const cards=[...document.querySelectorAll('.mip-gallery__card')];
+  const filters=[...document.querySelectorAll('.mip-gallery__filter')];
+  const empty=document.getElementById('gallery-empty');
+  const dialog=document.getElementById('gallery-dialog');
+  const dialogImage=dialog?.querySelector('img');
+  let category='all';
+  const update=()=>{
+    const query=search.value.trim().toLowerCase();
+    let visible=0;
+    cards.forEach(card=>{
+      const show=(category==='all'||card.dataset.category===category)&&(!query||card.dataset.title.includes(query)||card.dataset.subtitle.includes(query));
+      card.hidden=!show;
+      if(show)visible++;
+    });
+    empty.style.display=visible?'none':'block';
+  };
+  search?.addEventListener('input',update);
+  filters.forEach(filter=>filter.addEventListener('click',()=>{
+    filters.forEach(item=>item.classList.remove('is-active'));
+    filter.classList.add('is-active');
+    category=filter.dataset.category;
+    update();
+  }));
+  cards.forEach(card=>card.addEventListener('click',()=>{
+    dialogImage.src=card.dataset.image;
+    dialogImage.alt=card.querySelector('img').alt;
+    dialog.showModal();
+  }));
+  dialog?.querySelector('.mip-gallery__close')?.addEventListener('click',()=>dialog.close());
+  dialog?.addEventListener('click',event=>{if(event.target===dialog)dialog.close()});
+})();
+</script>

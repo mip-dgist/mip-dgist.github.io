@@ -195,6 +195,14 @@
     margin: 0;
   }
 
+  .news-card-description-line {
+    display: block;
+  }
+
+  .news-card-description-line + .news-card-description-line {
+    margin-top: 0.35rem;
+  }
+
   .news-card-layout {
     display: flex;
     align-items: stretch;
@@ -239,6 +247,16 @@
     object-fit: cover;
     object-position: right center;
     transform: translateX(-12px);
+  }
+
+  .news-thumbnail.news-thumbnail-starfellowship {
+    width: 240px;
+    height: 160px;
+    object-fit: contain;
+    object-position: center;
+    background-color: #ffffff;
+    clip-path: inset(0 4%);
+    transform: scale(1.08);
   }
 
   .news-card-content {
@@ -308,6 +326,13 @@
       height: auto;
       object-fit: initial;
       transform: none;
+    }
+
+    .news-thumbnail.news-thumbnail-starfellowship {
+      width: 100%;
+      height: auto;
+      clip-path: inset(0 3%);
+      transform: scale(1.04);
     }
 
     .news-card-bottom {
@@ -390,12 +415,16 @@
         </div>
         <div class="{{ if $item.thumbnail }}news-card-layout{{ if eq $item.thumbnail "/media/news/colm-2026.png" }} news-card-layout-colm{{ end }}{{ else }}news-card-plain{{ end }}">
           {{ with $item.thumbnail }}
-            <img src="{{ . | relURL }}" alt="{{ $itemTitle }}" class="news-thumbnail{{ if or (eq . "/media/authors/sangjin_lee.jpg") (eq . "/media/news/cvpr-2026.png") }} news-thumbnail-portrait{{ end }}{{ if eq . "/media/news/cvpr-2026.png" }} news-thumbnail-cvpr{{ end }}{{ if eq . "/media/authors/sangjin_lee.jpg" }} news-thumbnail-student{{ end }}{{ if or (eq . "/media/news/colm-2026.png") (eq . "/media/news/eccv-2026.png") }} news-thumbnail-natural{{ end }}{{ if eq . "/media/news/colm-2026.png" }} news-thumbnail-colm{{ end }}" loading="lazy" decoding="async">
+            <img src="{{ . | relURL }}" alt="{{ $itemTitle }}" class="news-thumbnail{{ if or (eq . "/media/authors/sangjin_lee.jpg") (eq . "/media/news/cvpr-2026.png") }} news-thumbnail-portrait{{ end }}{{ if eq . "/media/news/cvpr-2026.png" }} news-thumbnail-cvpr{{ end }}{{ if eq . "/media/authors/sangjin_lee.jpg" }} news-thumbnail-student{{ end }}{{ if or (eq . "/media/news/colm-2026.png") (eq . "/media/news/eccv-2026.png") }} news-thumbnail-natural{{ end }}{{ if eq . "/media/news/colm-2026.png" }} news-thumbnail-colm{{ end }}{{ if eq . "/media/news/starfellowship-2026.png" }} news-thumbnail-starfellowship{{ end }}" loading="lazy" decoding="async">
           {{ end }}
           <div class="news-card-content">
             <h3 class="font-semibold mb-2 text-gray-900 dark:text-gray-100" style="font-size: 17px;">{{ $itemTitle }}</h3>
             <div class="news-card-bottom">
-              <p class="text-sm text-gray-700 dark:text-gray-300">{{ $itemDesc }}</p>
+              <p class="text-sm text-gray-700 dark:text-gray-300">
+                {{ range split $itemDesc "\n\n" }}
+                  <span class="news-card-description-line">{{ . }}</span>
+                {{ end }}
+              </p>
             </div>
           </div>
         </div>

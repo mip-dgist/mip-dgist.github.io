@@ -1,0 +1,14 @@
+items:
+  - title: "MIP Lab Gathering"
+    subtitle: "MIP 연구실 모임"
+    date: "2026년 7월"
+    category: "Lab Life"
+    location: "DGIST, Daegu"
+    image: "/media/gallery/1.jpeg"
+
+  - title: "ICML Conference 2026"
+    subtitle: "ICML 2026 학회"
+    date: "2026년 7월"
+    category: "Conference"
+    location: "Korea, Seoul"
+    image: "/media/gallery/icml- confer-2026.jpg"
