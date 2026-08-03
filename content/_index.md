@@ -35,7 +35,7 @@ sections:
         image:
           # Add your image background to `assets/media/`.
           # filename: bg-triangles.svg
-          filename: dgist2.png
+          filename: dgist2-hd.png
           filters:
             brightness: 0.5
           size: cover
@@ -64,6 +64,9 @@ sections:
   #       padding: ["1rem", 0, "1rem", 0]
   - block: features
     id: features
+    design:
+      spacing:
+        padding: ["3rem", 0, "3rem", 0]
     content:
       title: What we do
       text: Our research focuses on multimodal intelligence and perception systems

@@ -15,7 +15,7 @@ hugoblox:
     # Site name - shown in navbar, footer, copyright, and browser title by default
     name: ""
     # Logo image path (absolute path from site root)
-    logo: "media/logo.png"
+    logo: "media/miplogo.png"
     # Legal entity for copyright notices (defaults to name if not set)
     organization: "DGIST MIP Lab."
     # Schema.org type for structured data
@@ -85,7 +85,7 @@ hugoblox:
   header:
     enable: true
     # Logo image path (absolute path from site root)
-    logo: "media/logo.png"
+    logo: "media/miplogo.png"
     # Header style variant
     style: navbar                       # navbar | navbar-simple | minimal
     # Stick to top on scroll
