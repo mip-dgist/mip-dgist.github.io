@@ -7,6 +7,11 @@ DGIST **MIP Lab** (Multimodal AI · Robot Perception · Medical Imaging)의 공�
 > **처음 참여하는 분은 먼저 [MANUAL.md](MANUAL.md)를 읽어주세요.** 설치부터 콘텐츠 편집, 배포까지
 > 단계별로 정리되어 있습니다. (SSH 키 설정은 [SSH_SETUP.md](SSH_SETUP.md) 참고)
 
+## 사용 및 문의
+본 저장소는 DGIST MIP Lab 공식 홈페이지 운영을 위해 제작되었습니다.
+소스 코드, 디자인 또는 구성 요소를 다른 홈페이지나 프로젝트에 참고하거나 활용하고자 하는 경우, 사전에 아래 이메일로 문의하여 사용 허가를 받은 후 활용해 주시기 바랍니다.
+> 문의: shyoon [at] dgist [dot] ac [dot] kr
+
 ## 기술 스택
 
 - **Hugo (extended)** — 정적 사이트 생성기
