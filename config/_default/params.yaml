@@ -100,8 +100,8 @@ hugoblox:
     # Call-to-action button
     cta:
       enable: false
-      text: ""
-      url: ""
+      text: "Apply now"
+      url: "/contact/"
 
   # ────────────────────────────────────────────────────────────────────────────
   # FOOTER

@@ -4,7 +4,7 @@
 
 main:
   - name: Home
-    url: /#top
+    url: /
     weight: 10
   # - name: Features
   #   url: /#features
