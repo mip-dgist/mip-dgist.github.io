@@ -1,0 +1,107 @@
+{{ $research := slice
+  (dict "number" "01" "title" "Physical AI" "description" "Developing vision-language-action models for autonomous robots." "image" "/media/home/phyisacal_ai.jpg")
+  (dict "number" "02" "title" "Multimodal AI" "description" "Research on integrating vision, language, and other modalities for intelligent perception systems." "image" "/media/home/Multimodal-AI.jpg")
+  (dict "number" "03" "title" "Computer Vision" "description" "Advanced visual perception, detection, segmentation, and scene understanding." "image" "/media/home/computer_vision.jpg")
+  (dict "number" "04" "title" "Medical AI / AI for Science" "description" "Applying AI to medical imaging, genomics, protein design, and scientific discovery." "image" "/media/home/medical_ai.png")
+  (dict "number" "05" "title" "Top-Tier Publications" "description" "Publishing cutting-edge work at CVPR, ICCV, ECCV, NeurIPS, and other leading venues." "image" "/media/home/top_tier.png")
+}}
+
+<main class="mip-home">
+  <section class="mip-hero" aria-labelledby="mip-hero-title">
+    <div class="mip-hero-shade"></div>
+    <div class="mip-hero-content">
+      <h1 id="mip-hero-title"><span class="mip-hero-title-line">Multimodal Intelligence &amp; Perception</span><span>Laboratory</span></h1>
+      <p>DGIST (Daegu Gyeongbuk Institute of Science and Technology)</p>
+      <a class="mip-outline-button" href="{{ "/research/" | relURL }}">Explore Research <span aria-hidden="true">→</span></a>
+    </div>
+  </section>
+
+  <section class="mip-section mip-research-section" aria-labelledby="research-title">
+    <header class="mip-section-heading">
+      <h2 id="research-title">What we do</h2>
+      <p>Our research focuses on multimodal intelligence and perception systems</p>
+    </header>
+    <div class="mip-research-grid">
+      {{ range $index, $item := $research }}
+        <button class="mip-research-card{{ if eq $index 0 }} is-active{{ end }}" type="button" style="--card-image: url('{{ $item.image | relURL }}')" aria-expanded="{{ if eq $index 0 }}true{{ else }}false{{ end }}">
+          <span class="mip-research-number">{{ $item.number }}</span>
+          <div class="mip-research-copy">
+            <span class="mip-research-label">{{ $item.title }}</span>
+            <h3>{{ $item.description }}</h3>
+          </div>
+          <span class="mip-research-vertical">{{ $item.title }}</span>
+        </button>
+      {{ end }}
+    </div>
+  </section>
+
+  <section class="mip-section mip-news-section" aria-labelledby="news-title">
+    <div class="mip-news-top">
+      <header class="mip-section-heading">
+        <h2 id="news-title">Latest News</h2>
+        <p>Highlights from our latest research, awards, projects, and lab activities</p>
+      </header>
+      <nav class="mip-news-tabs" aria-label="News categories">
+        <span class="active">All</span><a href="{{ "/news/" | relURL }}">Publication</a><a href="{{ "/news/" | relURL }}">Award</a>
+      </nav>
+    </div>
+    <div class="mip-news-grid">
+      {{ $items := sort site.Data.news.news "date" "desc" }}
+      {{ range first 4 $items }}
+        <article class="mip-news-card">
+          <div class="mip-news-copy">
+            <div>
+              <h3>{{ if .home_title_en }}<span>{{ .home_title_en }}</span><span lang="ko">{{ .home_title_ko }}</span>{{ else }}{{ .home_title | default .title }}{{ end }}</h3>
+              <time datetime="{{ .date }}">{{ (time .date).Format "January 2, 2006" }}</time>
+            </div>
+            <p>{{ .home_description | default .description | plainify }}</p>
+            <span class="mip-news-tag">{{ .type | title }}</span>
+          </div>
+          {{ with .thumbnail }}<div class="mip-news-media"><img src="{{ . | relURL }}" alt="" loading="lazy" decoding="async"></div>{{ end }}
+        </article>
+      {{ end }}
+    </div>
+    <div class="mip-news-more"><a href="{{ "/news/" | relURL }}">Read more <span aria-hidden="true">→</span></a></div>
+  </section>
+</main>
+
+<script>
+(() => {
+  const grid = document.querySelector('.mip-research-grid');
+  if (!grid) return;
+  const cards = [...grid.querySelectorAll('.mip-research-card')];
+  let current = 0;
+  let timer;
+
+  const activate = (index) => {
+    current = index;
+    cards.forEach((card, cardIndex) => {
+      const active = cardIndex === index;
+      card.classList.toggle('is-active', active);
+      card.setAttribute('aria-expanded', String(active));
+    });
+  };
+
+  const start = () => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || window.innerWidth <= 900) return;
+    clearInterval(timer);
+    timer = setInterval(() => activate((current + 1) % cards.length), 3500);
+  };
+
+  cards.forEach((card, index) => {
+    card.addEventListener('click', (event) => {
+      if (window.innerWidth > 900 && !card.classList.contains('is-active')) {
+        event.preventDefault();
+        activate(index);
+        start();
+      }
+    });
+  });
+
+  grid.addEventListener('mouseenter', () => clearInterval(timer));
+  grid.addEventListener('mouseleave', start);
+  document.addEventListener('visibilitychange', () => document.hidden ? clearInterval(timer) : start());
+  start();
+})();
+</script>
+

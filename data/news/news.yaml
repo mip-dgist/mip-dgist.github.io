@@ -1,14 +1,18 @@
-- date: 2026-07-31
-  type: grant
-  title: "Selected for the 2026 Star Fellowship for Top-Tier Early-Career Researchers (2026년도 최고급 신진연구자 지원사업, 스타펠로우십)"
-  description: "The total program budget is KRW 11 billion, with approximately KRW 1.1 billion allocated to MIP Lab.\n\nProject period: 2026 ~ 2031.12.31."
-  thumbnail: "/media/news/starfellowship-2026.png"
-  home_featured: true
+# - date: 2026-07-31
+#   type: grant
+#   title: "Selected for the 2026 Star Fellowship for Top-Tier Early-Career Researchers (2026년도 최고급 신진연구자 지원사업, 스타펠로우십)"
+#   description: "The total program budget is KRW 11 billion, with approximately KRW 1.1 billion allocated to MIP Lab.\n\nProject period: 2026 ~ 2031.12.31."
+#   home_title: "Selected for the 2026 Star Fellowship"
+#   home_description: "MIP Lab receives KRW 1.1 billion in research funding for 2026–2031."
+#   thumbnail: "/media/news/starfellowship-2026.png"
+#   home_featured: true
 
 - date: 2026-07-08
   type: publication
   title: "A paper accepted to COLM 2026"
   description: "A paper from MIP Lab is accepted to COLM 2026. <TrailBlazer: History-Guided Reinforcement Learning for Black-Box LLM Jailbreaking, Sung-Hoon Yoon*, Ruizhi Qian*, Minda Zhao*, Weiyue Li*, and Mengyu Wang>"
+  home_title: "A paper accepted to COLM 2026"
+  home_description: "TrailBlazer, our work on black-box LLM jailbreaking, was accepted to COLM 2026."
   thumbnail: "/media/news/colm-2026.png"
   home_featured: true
 
@@ -16,6 +20,8 @@
   type: publication
   title: "A paper accepted to ECCV 2026"
   description: "A paper from MIP Lab is accepted to ECCV 2026. <DINOde: Continuous Vision-Text Alignment for Open-Vocabulary Semantic Segmentation, Sung-Hoon Yoon*, Hoyong Kwon*, Changgyoon Oh*, and Kuk-Jin Yoon>"
+  home_title: "A paper accepted to ECCV 2026"
+  home_description: "DINOde, our work on open-vocabulary segmentation, was accepted to ECCV 2026."
   thumbnail: "/media/news/eccv-2026.png"
   home_featured: true
 
@@ -23,6 +29,8 @@
   type: award
   title: "1st place at ICRA 2026 Workshop on Field Robotics (GOOSE 2D Fine-Grained Semantic Segmentation Challenge)"
   description: "MIP Lab members Jaeil Park, Hyobin Choi, and Sangjin Lee won 1st place in the ICRA 2026 GOOSE 2D Fine-Grained Semantic Segmentation Challenge. Co-advised by Dr. Hyungtae Lim (MIT SPARK Lab)."
+  home_title: "1st Place in the ICRA 2026 GOOSE Challenge"
+  home_description: "Jaeil Park, Hyobin Choi, and Sangjin Lee won the GOOSE 2D segmentation challenge."
   url: "/news/goose-challenge-2026/"
   thumbnail: "/news/goose-challenge-2026/icra_challenge2.jpg"
   home_featured: true
@@ -31,6 +39,10 @@
   type: grant
   title: "Selected for MSIT Future Convergence Pioneer Project — Humanoid Swarm Autonomous Operation"
   description: "MIP Lab has been selected for the MSIT-sponsored 「2026 Future Convergence Science & Technology Development Project (Future Promising Convergence Pioneer)」 — 'Development of Group Perception-Understanding-Cooperation based Autonomous Operation Technology for Humanoid Swarm Tasks'."
+  home_title: "MSIT Future Convergence Pioneer Project (다중 휴머노이드 자율협업 기술 개발)"
+  home_title_en: "MSIT Future Convergence Pioneer Project"
+  home_title_ko: "(다중 휴머노이드 자율협업 기술 개발)"
+  home_description: "MIP Lab was selected for the project on autonomous collaboration among multiple humanoid robots."
   thumbnail: "/media/news/msit-2026.jpg"
 
 - date: 2026-04-24
