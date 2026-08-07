@@ -1,6 +1,6 @@
 {{ $research := slice
   (dict "number" "01" "title" "Physical AI" "description" "Developing vision-language-action models for autonomous robots." "image" "/media/home/physical-ai-hd.png")
-  (dict "number" "02" "title" "Multimodal AI" "description" "Research on integrating vision, language, and other modalities for intelligent perception systems." "image" "/media/home/multimodal_ai.gif")
+  (dict "number" "02" "title" "Multimodal AI" "description" "Integrating vision, language, and other modalities for intelligent perception and reasoning." "description_line1" "Integrating vision, language, and other modalities" "description_line2" "for intelligent perception and reasoning." "image" "/media/home/multimodal_ai.gif")
   (dict "number" "03" "title" "Computer Vision" "description" "Advanced visual perception, detection, segmentation, and scene understanding." "image" "/media/home/computer-vision-hd.png")
   (dict "number" "04" "title" "Medical AI / AI for Science" "description" "Applying AI to medical imaging, genomics, protein design, and scientific discovery." "image" "/media/home/medical_ai.png")
   (dict "number" "05" "title" "Top-Tier Publications" "description" "Publishing cutting-edge work at CVPR, ICCV, ECCV, NeurIPS, and other leading venues." "image" "/media/home/top_tier.png")
@@ -27,7 +27,7 @@
           <span class="mip-research-number">{{ $item.number }}</span>
           <div class="mip-research-copy">
             <span class="mip-research-label">{{ $item.title }}</span>
-            <h3>{{ $item.description }}</h3>
+            <h3>{{ if $item.description_line1 }}<span>{{ $item.description_line1 }}</span><span>{{ $item.description_line2 }}</span>{{ else }}{{ $item.description }}{{ end }}</h3>
           </div>
           <span class="mip-research-vertical">{{ $item.title }}</span>
         </button>
@@ -89,6 +89,10 @@
   };
 
   cards.forEach((card, index) => {
+    card.addEventListener('mouseenter', () => {
+      if (window.innerWidth > 900) activate(index);
+    });
+
     card.addEventListener('click', (event) => {
       if (window.innerWidth > 900 && !card.classList.contains('is-active')) {
         event.preventDefault();
