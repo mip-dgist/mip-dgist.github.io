@@ -138,13 +138,15 @@ body:has(#mip-home) #site-header .navbar-brand img { filter: brightness(0) inver
 .mip-section-heading p { margin: 0; color: var(--muted); font-size: 16px; line-height: 1.4; letter-spacing: -.025em; }
 
 .mip-research-grid { display: flex; gap: 16px; height: 440px; overflow: hidden; }
-.mip-research-card { position: relative; min-width: 88px; flex: 0 0 88px; padding: 0; overflow: hidden; border: 0; border-radius: 20px; color: #fff !important; background-image: linear-gradient(180deg, transparent, rgb(0 0 0 / .58)), var(--card-image); background-position: center; background-size: cover; font: inherit; text-align: left; cursor: pointer; transition: flex-grow .68s cubic-bezier(.25, .8, .25, 1); }
+.mip-research-card { position: relative; min-width: 88px; flex: 0 0 88px; padding: 0; overflow: hidden; border: 0; border-radius: 20px; color: #fff !important; background-image: linear-gradient(180deg, transparent, rgb(0 0 0 / .58)), var(--card-image); background-position: center; background-size: cover; font: inherit; text-align: left; cursor: pointer; transition: flex-grow 1.3s cubic-bezier(.25, .8, .25, 1); }
 .mip-research-card.is-active { flex-grow: 1; }
 .mip-research-card:nth-child(2) { background-color: #fff; background-position: center, center bottom; background-size: 100% 100%, auto 123.3%; background-repeat: no-repeat; image-rendering: auto; }
 .mip-research-number { position: absolute; top: 20px; right: 20px; display: grid; place-items: center; width: 48px; height: 48px; border-radius: 50%; background: rgb(255 255 255 / .72); backdrop-filter: blur(5px); color: var(--ink); font-size: 16px; }
 .mip-research-copy { position: absolute; right: 39px; bottom: 60px; left: 39px; opacity: 1; transform: translateY(0); transition: opacity .38s ease .22s, transform .58s cubic-bezier(.22, 1, .36, 1) .16s; }
 .mip-research-label { display: inline-flex; padding: 8px 16px; border-radius: 999px; background: rgb(255 255 255 / .2); backdrop-filter: blur(5px); font-size: 14px; font-weight: 500; }
 .mip-research-copy h3 { max-width: 570px; margin: 16px 0 0; color: #fff; font-size: 30px; font-weight: 400; line-height: 1.35; letter-spacing: -.025em; }
+.mip-research-card:nth-child(2) .mip-research-copy h3 { max-width: 1200px; }
+.mip-research-card:nth-child(2) .mip-research-copy h3 span { display: block; white-space: nowrap; }
 .mip-research-card:not(.is-active) .mip-research-copy { opacity: 0; transform: translateY(14px); transition-delay: 0s; }
 .mip-research-vertical { position: absolute; top: 50%; left: 50%; color: #fff; font-size: 18px; white-space: nowrap; opacity: 1; transform: translate(-50%, -50%) rotate(90deg); transition: opacity .2s ease .12s; }
 .mip-research-card.is-active .mip-research-vertical { opacity: 0; transition-delay: 0s; }
@@ -183,6 +185,7 @@ body:has(#mip-home) #site-header .navbar-brand img { filter: brightness(0) inver
   .mip-research-card, .mip-research-card.is-active { min-width: 0; height: 330px; flex: none; }
   .mip-research-card .mip-research-copy { right: 24px; bottom: 28px; left: 24px; opacity: 1 !important; transform: none !important; }
   .mip-research-copy h3 { font-size: 20px; }
+  .mip-research-card:nth-child(2) .mip-research-copy h3 span { white-space: normal; }
   .mip-research-vertical { display: none; }
   .mip-news-grid { grid-template-columns: 1fr; }
   .mip-hero-arrow { display: none; }
