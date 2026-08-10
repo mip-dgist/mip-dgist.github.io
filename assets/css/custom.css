@@ -212,3 +212,8 @@ body:has(#mip-home) #site-header .navbar-brand img { filter: brightness(0) inver
   .mip-news-media img { max-height: 118px; }
   .mip-news-card p { font-size: 13px; -webkit-line-clamp: 3; }
 }
+/* Keep the navbar brand image-only while retaining the site name in SEO metadata. */
+#site-header .navbar-brand {
+  font-size: 0;
+  line-height: 0;
+}
