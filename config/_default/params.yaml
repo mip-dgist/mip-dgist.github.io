@@ -13,13 +13,13 @@ hugoblox:
   # ────────────────────────────────────────────────────────────────────────────
   identity:
     # Site name - shown in navbar, footer, copyright, and browser title by default
-    name: ""
+    name: "MIP Lab"
     # Logo image path (absolute path from site root)
     logo: "media/miplogo.png"
     # Legal entity for copyright notices (defaults to name if not set)
     organization: "DGIST MIP Lab."
     # Schema.org type for structured data
-    type: person                        # person | organization | local_business
+    type: organization                  # person | organization | local_business
     # Short tagline displayed on your site
     tagline: ""
     # Site meta description for search engines and social sharing
@@ -133,7 +133,7 @@ hugoblox:
   # ────────────────────────────────────────────────────────────────────────────
   seo:
     # Browser tab title override (defaults to identity.name if not set)
-    title: ""
+    title: "MIP Lab"
     # For local_business identity type only
     location:
       address:
