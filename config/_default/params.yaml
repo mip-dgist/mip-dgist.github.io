@@ -13,7 +13,7 @@ hugoblox:
   # ────────────────────────────────────────────────────────────────────────────
   identity:
     # Site name - shown in navbar, footer, copyright, and browser title by default
-    name: "MIP Lab"
+    name: ""
     # Logo image path (absolute path from site root)
     logo: "media/miplogo.png"
     # Legal entity for copyright notices (defaults to name if not set)
