@@ -1,5 +1,5 @@
 ---
-title: 'Home'
+title: 'Multimodal Intelligence and Perception Laboratory'
 date: 2023-10-24
 type: landing
 
