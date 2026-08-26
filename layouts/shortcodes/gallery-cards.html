@@ -1,13 +1,13 @@
 <style>
   #gallery .mb-6{display:none}
-  .mip-gallery{width:100vw;max-width:none;margin-left:calc(50% - 50vw);color:#172033}
+  .mip-gallery{width:100vw;max-width:none;margin-left:calc(50% - 50vw);background:#f3f4f6;color:#172033}
   .mip-gallery *{box-sizing:border-box}
   .mip-gallery__inner{width:min(1200px,calc(100% - 40px));margin:0 auto}
-  .mip-gallery__hero{padding:34px 0 36px;border-bottom:1px solid #e3e6ea;background:#f7f8fa}
-  .mip-gallery__hero .mip-gallery__inner{width:100%;max-width:none;padding:0 28px}
-  .mip-gallery__hero h1{margin:0;font-size:2rem;line-height:1.2;letter-spacing:-.025em}
+  .mip-gallery__hero{padding:34px 0 12px;background:#f3f4f6}
+  .mip-gallery__hero .mip-gallery__inner{width:100%;max-width:1380px;padding:0 calc(2rem + 2px)}
+  .mip-gallery__hero h1{margin:0;font-size:1.875rem;font-weight:700;line-height:2.25rem;letter-spacing:normal}
   .mip-gallery__hero p{margin:14px 0 0;color:#606a79;font-size:1rem}
-  .mip-gallery__content{padding:64px 0 76px}
+  .mip-gallery__content{padding:24px 0 76px}
   .mip-gallery__controls{width:min(650px,100%);margin:0 auto 38px}
   .mip-gallery__search{width:100%;padding:9px 18px;border:1px solid #d6dae0;border-radius:999px;background:#fff;color:#172033;font:inherit;font-size:.95rem;outline:none}
   .mip-gallery__search:focus{border-color:#3b82f6;box-shadow:0 0 0 3px rgb(59 130 246/.16)}
@@ -32,7 +32,7 @@
   .mip-gallery__dialog img{display:block;width:auto;max-width:100%;height:auto;max-height:90vh;margin:auto;object-fit:contain;object-position:center}
   .mip-gallery__close{position:absolute;z-index:2;top:12px;right:12px;display:grid;place-items:center;width:42px;height:42px;border:0;border-radius:50%;background:rgb(0 0 0/.72);color:#fff;font-size:28px;cursor:pointer}
   @media(max-width:900px){.mip-gallery__grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-  @media(max-width:600px){.mip-gallery__inner{width:min(100% - 28px,1200px)}.mip-gallery__hero{padding:28px 0 30px}.mip-gallery__hero .mip-gallery__inner{padding:0 20px}.mip-gallery__content{padding:42px 0 56px}.mip-gallery__grid{grid-template-columns:1fr}}
+  @media(max-width:600px){.mip-gallery__inner{width:min(100% - 28px,1200px)}.mip-gallery__hero{padding:28px 0 12px}.mip-gallery__hero .mip-gallery__inner{padding:0 calc(2rem + 2px)}.mip-gallery__content{padding:24px 0 56px}.mip-gallery__grid{grid-template-columns:1fr}}
 </style>
 <div class="mip-gallery">
   <header class="mip-gallery__hero"><div class="mip-gallery__inner"><h1>Gallery</h1><p>Lab life, events, and research highlights</p></div></header>

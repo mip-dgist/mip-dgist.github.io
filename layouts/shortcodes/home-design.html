@@ -57,7 +57,7 @@
             <p>{{ .home_description | default .description | plainify }}</p>
             <span class="mip-news-tag">{{ .type | title }}</span>
           </div>
-          {{ with .thumbnail }}<div class="mip-news-media"><img src="{{ . | relURL }}" alt="" loading="lazy" decoding="async"></div>{{ end }}
+          {{ with .thumbnail }}<div class="mip-news-media{{ if eq . "/media/news/collage_2026_08.png" }} mip-news-media-collage{{ end }}{{ if eq . "/media/news/colm-2026.png" }} mip-news-media-colm{{ end }}{{ if eq . "/news/goose-challenge-2026/icra_challenge2.jpg" }} mip-news-media-icra{{ end }}"><img src="{{ . | relURL }}{{ if eq . "/media/news/collage_2026_08.png" }}?v=20260826{{ end }}" alt="" loading="lazy" decoding="async"></div>{{ end }}
         </article>
       {{ end }}
     </div>

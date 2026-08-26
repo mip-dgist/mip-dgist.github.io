@@ -9,13 +9,15 @@
   [id="news"] .prose,
   [id="news"] > div,
   [id="news"] > div > div {
-    max-width: 100% !important;
+    max-width: 1380px !important;
     width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 
   section[id="news"] [class*="max-w"],
   [id="news"] [class*="max-w"] {
-    max-width: 100% !important;
+    max-width: 1380px !important;
   }
 
   .filter-btn {
@@ -64,21 +66,37 @@
 
   #news-grid {
     width: 100%;
+    max-width: 1380px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .news-controls {
     width: 100%;
+    max-width: 1380px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   body:not(.home) #news > .flex > .mb-6 {
-    width: min(100% - 2rem, 1120px);
+    box-sizing: border-box;
+    width: min(100% - 3rem, 1380px);
     margin-left: auto;
     margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
     text-align: left;
+    font-size: 1.875rem !important;
+    font-weight: 700 !important;
+    line-height: 2.25rem !important;
   }
 
   .news-card-meta-row {
     margin-top: 1.1rem;
+  }
+
+  .news-card-meta-row > span:first-child {
+    transform: translateY(-4px);
   }
 
   .home-news-list {
@@ -179,8 +197,27 @@
   }
 
   .news-card.news-card-with-thumbnail {
-    padding-top: 0.25rem !important;
+    min-height: 0;
+    padding: 1rem 1.5rem 1.25rem !important;
+  }
+
+  .news-card.news-card-with-thumbnail-colm,
+  .news-card.news-card-with-thumbnail-eccv,
+  .news-card.news-card-with-thumbnail-cvpr {
+    height: 250px;
+  }
+
+  .news-card.news-card-with-thumbnail-msit {
+    padding-bottom: 0.5rem !important;
+  }
+
+  .news-card.news-card-compact-bottom {
     padding-bottom: 0.25rem !important;
+  }
+
+  .news-card.news-card-nipa {
+    padding-bottom: 0 !important;
+    overflow: hidden;
   }
 
   .news-card-bottom {
@@ -204,20 +241,25 @@
   }
 
   .news-card-layout {
-    display: flex;
-    align-items: stretch;
-    gap: 1.5rem;
+    display: grid;
+    grid-template-columns: 20rem minmax(0, 1fr);
+    align-items: start;
+    gap: 2.5rem;
+    min-height: 0;
+  }
+
+  .news-card-layout > .news-thumbnail {
+    overflow: hidden;
   }
 
   .news-thumbnail {
-    width: 240px;
-    height: 160px;
-    flex-shrink: 0;
-    align-self: center;
-    margin-top: 0.5rem !important;
-    margin-bottom: 0.75rem !important;
+    width: 320px;
+    height: 240px;
+    margin: 0 !important;
     border-radius: 0.65rem;
-    object-fit: cover;
+    object-fit: contain;
+    object-position: center;
+    background-color: #ffffff;
   }
 
   .news-thumbnail.news-thumbnail-portrait {
@@ -227,36 +269,55 @@
   }
 
   .news-thumbnail.news-thumbnail-cvpr {
-    width: 260px;
+    width: 320px;
+    height: 165px;
+    margin-bottom: -8px !important;
     background-color: #ffffff;
-    transform: translateX(-8px);
+    clip-path: inset(0 0 8px 0);
+    transform: scale(1.15);
+    transform-origin: center;
   }
 
   .news-thumbnail.news-thumbnail-student {
     background-color: #ffffff;
+    transform: scale(0.85);
   }
 
   .news-thumbnail.news-thumbnail-natural {
-    height: auto;
-    object-fit: initial;
-  }
-
-  .news-thumbnail.news-thumbnail-colm {
-    width: 280px;
-    height: 147px;
-    object-fit: cover;
-    object-position: right center;
-    transform: translateX(-12px);
-  }
-
-  .news-thumbnail.news-thumbnail-starfellowship {
-    width: 240px;
-    height: 160px;
+    width: 320px;
+    height: 240px;
     object-fit: contain;
     object-position: center;
     background-color: #ffffff;
-    clip-path: inset(0 4%);
-    transform: scale(1.08);
+  }
+
+  .news-thumbnail.news-thumbnail-collage {
+    width: 320px;
+    height: 240px;
+    object-fit: contain;
+    object-position: center;
+    background-color: #ffffff;
+    transform: scale(0.95);
+    transform-origin: right center;
+  }
+
+  .news-thumbnail.news-thumbnail-colm {
+    width: 320px;
+    height: 165px;
+    align-self: center;
+    object-fit: contain;
+    object-position: center;
+    transform: none;
+  }
+
+  .news-thumbnail.news-thumbnail-starfellowship {
+    width: 320px;
+    height: 240px;
+    object-fit: contain;
+    object-position: center;
+    background-color: #ffffff;
+    clip-path: none;
+    transform: none;
   }
 
   .news-card-content {
@@ -268,11 +329,48 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    transform: translateY(-0.75rem);
+    transform: translateY(-1rem);
+  }
+
+  /* Compensate for whitespace embedded in logo/poster source files. */
+  .news-thumbnail:not(.news-thumbnail-portrait):not(.news-thumbnail-collage) {
+    transform: scale(1.1);
+  }
+
+  .news-thumbnail[src$="/eccv-2026.png"] {
+    width: 300px;
+    height: 155px;
+    margin-bottom: -4px !important;
+    justify-self: center;
+    align-self: center;
+    object-position: center top;
+    clip-path: inset(0 0 4px 0);
+    transform: none;
+  }
+
+  .news-thumbnail.news-thumbnail-msit {
+    transform: scale(0.85) !important;
+  }
+
+  .news-thumbnail.news-thumbnail-icra {
+    transform: translateX(8px) scale(0.9, 0.85) !important;
+  }
+
+  .news-thumbnail.news-thumbnail-nipa {
+    margin-bottom: -28px !important;
+    object-fit: cover;
+    object-position: center;
+    clip-path: inset(0 0 12% 0);
+    transform: translateY(-24px) scale(0.72) !important;
+  }
+
+  .news-card-layout .news-card-content h3 {
+    font-size: 24px !important;
+    line-height: 1.35;
   }
 
   .news-card-layout.news-card-layout-colm .news-card-content {
-    margin-left: -40px;
+    margin-left: 0;
   }
 
   .news-card-plain .news-card-content h3 {
@@ -285,6 +383,11 @@
   }
 
   @media (max-width: 640px) {
+    #news-grid,
+    .news-controls {
+      width: 100%;
+    }
+
     .home-news-row {
       grid-template-columns: 5.5rem minmax(0, 1fr);
       gap: 0.75rem;
@@ -300,39 +403,93 @@
     }
 
     .news-card-layout {
+      display: flex;
       flex-direction: column;
+      gap: 1.25rem;
+      min-height: 0;
+    }
+
+    .news-card.news-card-with-thumbnail {
+      min-height: 0;
+      height: auto;
+      padding: 1rem !important;
+    }
+
+    .news-card.news-card-with-thumbnail-msit {
+      padding-bottom: 0.5rem !important;
+    }
+
+    .news-card.news-card-compact-bottom {
+      padding-bottom: 0.25rem !important;
+    }
+
+    .news-card.news-card-nipa {
+      padding-bottom: 0 !important;
     }
 
     .news-card-layout.news-card-layout-colm .news-card-content {
       margin-left: 0;
     }
 
+    .news-card-layout .news-card-content {
+      transform: translateY(-0.35rem);
+    }
+
+    .news-card-layout .news-card-content h3 {
+      font-size: 20px !important;
+    }
+
     .news-thumbnail {
+      width: 100%;
+      height: 220px;
+      transform: none !important;
+    }
+
+    .news-thumbnail.news-thumbnail-student {
+      transform: scale(0.85) !important;
+    }
+
+    .news-thumbnail.news-thumbnail-icra {
+      transform: translateX(6px) scale(0.9, 0.85) !important;
+    }
+
+    .news-thumbnail.news-thumbnail-natural {
       width: 100%;
       height: 220px;
     }
 
-    .news-thumbnail.news-thumbnail-natural {
-      height: auto;
+    .news-thumbnail.news-thumbnail-collage {
+      transform: scale(0.95) !important;
+    }
+
+    .news-thumbnail[src$="/eccv-2026.png"] {
+      width: 100%;
+      height: 160px;
     }
 
     .news-thumbnail.news-thumbnail-cvpr {
       width: 100%;
+      height: 160px;
+      margin-bottom: -8px !important;
       transform: none;
     }
 
     .news-thumbnail.news-thumbnail-colm {
       width: 100%;
-      height: auto;
-      object-fit: initial;
+      height: 160px;
+      object-fit: contain;
       transform: none;
     }
 
     .news-thumbnail.news-thumbnail-starfellowship {
       width: 100%;
-      height: auto;
-      clip-path: inset(0 3%);
-      transform: scale(1.04);
+      height: 220px;
+      clip-path: none;
+      transform: none;
+    }
+
+    .news-thumbnail.news-thumbnail-msit {
+      transform: scale(0.85) !important;
     }
 
     .news-card-bottom {
@@ -346,31 +503,28 @@
   }
 </style>
 
-<div style="width: 100%; max-width: 100%; margin-left: auto; margin-right: auto; padding-left: 1rem; padding-right: 1rem;">
+<div style="width: 100%; max-width: 100%; margin-left: auto; margin-right: auto; padding-left: 1.5rem; padding-right: 1.5rem;">
   <div class="news-controls">
-  <div class="mb-6">
-    <input
-      type="text"
-      id="news-search"
-      placeholder="Search news..."
-      class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
-      style="font-size: 1rem;"
-    >
-  </div>
-
-  <div class="mb-6">
-    <span class="text-sm font-medium text-gray-700 dark:text-gray-300 mr-3">Filter by Type:</span>
-    <div class="inline-flex flex-wrap gap-2 mt-2">
+    <div class="mb-6">
+      <input
+        type="text"
+        id="news-search"
+        placeholder="Search news..."
+        class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        style="font-size: 1rem;"
+      >
+    </div>
+    <div class="mb-6">
+      <span class="text-sm font-medium text-gray-700 dark:text-gray-300 mr-3">Filter by Type:</span>
+      <div class="inline-flex flex-wrap gap-2 mt-2">
       <button class="filter-btn active" data-filter="type" data-value="all">All Types</button>
       <button class="filter-btn" data-filter="type" data-value="publication">Publication</button>
       <button class="filter-btn" data-filter="type" data-value="admission">Admission</button>
-      <button class="filter-btn" data-filter="type" data-value="graduation">Graduation</button>
-      <button class="filter-btn" data-filter="type" data-value="career">Career</button>
       <button class="filter-btn" data-filter="type" data-value="award">Award</button>
       <button class="filter-btn" data-filter="type" data-value="service">Service</button>
       <button class="filter-btn" data-filter="type" data-value="grant">Grant</button>
+      </div>
     </div>
-  </div>
   </div>
   <div class="grid grid-cols-1 gap-4" id="news-grid">
   {{ if site.Data.news }}
@@ -385,7 +539,7 @@
       {{ $itemTitle := $item.title | default "" }}
       {{ $itemDesc := $item.description | default "" }}
       <div
-        class="news-card{{ if $item.thumbnail }} news-card-with-thumbnail{{ end }} bg-white dark:bg-gray-800 rounded-lg shadow-md px-6 pt-4 pb-5 hover:shadow-lg transition-shadow"
+        class="news-card{{ if $item.thumbnail }} news-card-with-thumbnail{{ end }}{{ if $item.compact_bottom }} news-card-compact-bottom{{ end }}{{ if eq $item.thumbnail "/media/news/nipa-2026.png" }} news-card-nipa{{ end }}{{ if eq $item.thumbnail "/media/news/colm-2026.png" }} news-card-with-thumbnail-colm{{ end }}{{ if eq $item.thumbnail "/media/news/eccv-2026.png" }} news-card-with-thumbnail-eccv{{ end }}{{ if eq $item.thumbnail "/media/news/cvpr-2026.png" }} news-card-with-thumbnail-cvpr{{ end }}{{ if eq $item.thumbnail "/media/news/msit-2026.jpg" }} news-card-with-thumbnail-msit{{ end }} bg-white dark:bg-gray-800 rounded-lg shadow-md px-6 pt-4 pb-5 hover:shadow-lg transition-shadow"
         data-type="{{ lower $itemType }}"
         data-title="{{ lower $itemTitle }}"
         data-description="{{ lower $itemDesc }}"
@@ -415,7 +569,7 @@
         </div>
         <div class="{{ if $item.thumbnail }}news-card-layout{{ if eq $item.thumbnail "/media/news/colm-2026.png" }} news-card-layout-colm{{ end }}{{ else }}news-card-plain{{ end }}">
           {{ with $item.thumbnail }}
-            <img src="{{ . | relURL }}" alt="{{ $itemTitle }}" class="news-thumbnail{{ if or (eq . "/media/authors/sangjin_lee.jpg") (eq . "/media/news/cvpr-2026.png") }} news-thumbnail-portrait{{ end }}{{ if eq . "/media/news/cvpr-2026.png" }} news-thumbnail-cvpr{{ end }}{{ if eq . "/media/authors/sangjin_lee.jpg" }} news-thumbnail-student{{ end }}{{ if or (eq . "/media/news/colm-2026.png") (eq . "/media/news/eccv-2026.png") }} news-thumbnail-natural{{ end }}{{ if eq . "/media/news/colm-2026.png" }} news-thumbnail-colm{{ end }}{{ if eq . "/media/news/starfellowship-2026.png" }} news-thumbnail-starfellowship{{ end }}" loading="lazy" decoding="async">
+            <img src="{{ . | relURL }}{{ if eq . "/media/news/collage_2026_08.png" }}?v=20260826{{ end }}" alt="{{ $itemTitle }}" class="news-thumbnail{{ if or (eq . "/media/authors/sangjin_lee.jpg") (eq . "/media/news/cvpr-2026.png") }} news-thumbnail-portrait{{ end }}{{ if eq . "/media/news/cvpr-2026.png" }} news-thumbnail-cvpr{{ end }}{{ if eq . "/media/authors/sangjin_lee.jpg" }} news-thumbnail-student{{ end }}{{ if or (eq . "/media/news/colm-2026.png") (eq . "/media/news/eccv-2026.png") (eq . "/media/news/collage_2026_08.png") }} news-thumbnail-natural{{ end }}{{ if eq . "/media/news/collage_2026_08.png" }} news-thumbnail-collage{{ end }}{{ if eq . "/media/news/colm-2026.png" }} news-thumbnail-colm{{ end }}{{ if eq . "/media/news/nipa-2026.png" }} news-thumbnail-nipa{{ end }}{{ if eq . "/media/news/msit-2026.jpg" }} news-thumbnail-msit{{ end }}{{ if eq . "/media/news/starfellowship-2026.png" }} news-thumbnail-starfellowship{{ end }}{{ if eq . "/news/goose-challenge-2026/icra_challenge2.jpg" }} news-thumbnail-icra{{ end }}" loading="lazy" decoding="async">
           {{ end }}
           <div class="news-card-content">
             <h3 class="font-semibold mb-2 text-gray-900 dark:text-gray-100" style="font-size: 17px;">{{ $itemTitle }}</h3>
