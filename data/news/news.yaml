@@ -7,6 +7,13 @@
 #   thumbnail: "/media/news/starfellowship-2026.png"
 #   home_featured: true
 
+- date: 2026-08-24
+  type: admission
+  title: "New students joined MIP Lab (Fall 2026)"
+  description: "Six new master's students have joined the lab: Chanhyeok Ju, Wonbin Lee, Taekmin Youn, and Jaeil Park from the Department of Artificial Intelligence (AI), and Hyeonna Choi and Jayone Yang from the Department of Electrical Engineering and Computer Science (EECS). Welcome to MIP Lab!"
+  home_description: "Six master's students: Chanhyeok Ju, Wonbin Lee, Taekmin Youn, and Jaeil Park from AI; Hyeonna Choi and Jayone Yang from EECS."
+  thumbnail: "/media/news/collage_2026_08.png"
+
 - date: 2026-07-08
   type: publication
   title: "A paper accepted to COLM 2026"
@@ -33,6 +40,7 @@
   home_description: "Jaeil Park, Hyobin Choi, and Sangjin Lee won the GOOSE 2D segmentation challenge."
   url: "/news/goose-challenge-2026/"
   thumbnail: "/news/goose-challenge-2026/icra_challenge2.jpg"
+  compact_bottom: true
   home_featured: true
   
 - date: 2026-04-30
@@ -44,18 +52,21 @@
   home_title_ko: "(다중 휴머노이드 자율협업 기술 개발)"
   home_description: "MIP Lab was selected for the project on autonomous collaboration among multiple humanoid robots."
   thumbnail: "/media/news/msit-2026.jpg"
+  compact_bottom: true
 
 - date: 2026-04-24
   type: grant
   title: "Selected for NIPA Multimodal Camera-based On-device AI Drone Project"
   description: "MIP Lab has been selected for the NIPA-sponsored 「Development and Demonstration of AIoT Service for Early Detection and Response to Water Quality Anomalies Using Multimodal Camera-based On-device AI Drones」 project (500M KRW)."
   thumbnail: "/media/news/nipa-2026.png"
+  compact_bottom: true
 
 - date: 2026-04-24
   type: grant
   title: "Selected as Participant for Advanced GPU Utilization Support Program"
   description: "MIP Lab has been selected for the 「Advanced GPU Utilization Support Program」."
   thumbnail: "/media/news/msit-2026.jpg"
+  compact_bottom: true
 
 - date: 2026-02-23
   type: admission
@@ -76,6 +87,7 @@
   title: "Selected as Beta Service Participant for Advanced GPU Utilization Support Program"
   description: "MIP Lab has been selected as a beta service participant for the 「Advanced GPU Utilization Support Program」."
   thumbnail: "/media/news/msit-2026.jpg"
+  compact_bottom: true
   
 - date: 2025-12-18
   type: service

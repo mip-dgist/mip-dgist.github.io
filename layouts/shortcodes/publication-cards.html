@@ -10,13 +10,23 @@
   [id="publications"] .prose,
   [id="publications"] > div,
   [id="publications"] > div > div {
-    max-width: 100% !important;
+    max-width: 1380px !important;
     width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
   /* Target any max-width classes */
   section[id="publications"] [class*="max-w"],
   [id="publications"] [class*="max-w"] {
-    max-width: 100% !important;
+    max-width: 1380px !important;
+  }
+
+  /* Align the page title with the search field. */
+  body:not(.home) #publications > .flex > .mb-6 {
+    box-sizing: border-box;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: left;
   }
   
   .filter-btn {
@@ -51,6 +61,11 @@
   .publication-card.hidden {
     display: none;
   }
+
+  .year-header.hidden,
+  .year-divider.hidden {
+    display: none;
+  }
   
   /* Scroll animation styles */
   .publication-card,
@@ -68,7 +83,7 @@
     transform: translateY(0);
   }
 </style>
-<div style="width: 100%; max-width: 100%; margin-left: auto; margin-right: auto; padding-left: 1rem; padding-right: 1rem;">
+<div style="width: 100%; max-width: 1380px; margin-left: auto; margin-right: auto; padding-left: 1rem; padding-right: 1rem;">
   <!-- Search Bar -->
   <div class="mb-6">
     <input 
@@ -80,32 +95,17 @@
     >
   </div>
   
-  <!-- Filter by Year -->
-  <div class="mb-4">
-    <span class="text-sm font-medium text-gray-700 dark:text-gray-300 mr-3">Filter by Year:</span>
-    <div class="inline-flex flex-wrap gap-2 mt-2">
-      <button class="filter-btn active" data-filter="year" data-value="all">All Years</button>
-      <button class="filter-btn" data-filter="year" data-value="2026">2026</button>
-      <button class="filter-btn" data-filter="year" data-value="2025">2025</button>
-      <button class="filter-btn" data-filter="year" data-value="2024">2024</button>
-      <button class="filter-btn" data-filter="year" data-value="2023">2023</button>
-      <button class="filter-btn" data-filter="year" data-value="2022">2022</button>
-      <button class="filter-btn" data-filter="year" data-value="2021">2021</button>
-      <button class="filter-btn" data-filter="year" data-value="-2020">-2020</button>
-    </div>
-  </div>
-  
   <!-- Filter by Venue -->
   <div class="mb-6">
     <span class="text-sm font-medium text-gray-700 dark:text-gray-300 mr-3">Filter by Venue:</span>
     <div class="inline-flex flex-wrap gap-2 mt-2">
       <button class="filter-btn active" data-filter="venue" data-value="all">All Venues</button>
       <button class="filter-btn" data-filter="venue" data-value="CVPR">CVPR</button>
+      <button class="filter-btn" data-filter="venue" data-value="ECCV">ECCV</button>      
       <button class="filter-btn" data-filter="venue" data-value="ICCV">ICCV</button>
-      <button class="filter-btn" data-filter="venue" data-value="ECCV">ECCV</button>
       <button class="filter-btn" data-filter="venue" data-value="NeurIPS">NeurIPS</button>
-      <button class="filter-btn" data-filter="venue" data-value="Journals">Journals</button>
-      <button class="filter-btn" data-filter="venue" data-value="Patents">Patents</button>
+      <!-- <button class="filter-btn" data-filter="venue" data-value="Journals">Journals</button> -->
+      <!-- <button class="filter-btn" data-filter="venue" data-value="Patents">Patents</button> -->
       <button class="filter-btn" data-filter="venue" data-value="Other">Other</button>
     </div>
   </div>
@@ -124,10 +124,10 @@
     {{ if and (ne $year "") (ne $year $prevYear) }}
       {{ if ne $prevYear "" }}
         <!-- Year divider -->
-        <div class="col-span-1 mt-1 mb-1 year-divider" style="border-bottom: 2px solid #3b82f6;"></div>
+        <div class="col-span-1 mt-1 mb-1 year-divider" data-year="{{ $year }}" style="border-bottom: 2px solid #3b82f6;"></div>
       {{ end }}
       <!-- Year header -->
-      <div class="col-span-1 mt-1 year-header">
+      <div class="col-span-1 mt-1 year-header" data-year="{{ $year }}">
         <h2 class="font-semibold text-gray-800 dark:text-gray-200 mb-1" style="font-size: 21px;">{{ $year }}</h2>
       </div>
     {{ end }}
@@ -175,9 +175,10 @@
   const searchInput = document.getElementById('publication-search');
   const filterButtons = document.querySelectorAll('.filter-btn');
   const publicationCards = document.querySelectorAll('.publication-card');
+  const yearHeaders = document.querySelectorAll('.year-header');
+  const yearDividers = document.querySelectorAll('.year-divider');
   
   let activeFilters = {
-    year: 'all',
     venue: 'all',
     search: ''
   };
@@ -196,34 +197,11 @@
     });
   }, observerOptions);
   
-  function getYearValue(yearStr) {
-    if (!yearStr) return '';
-    const year = parseInt(yearStr);
-    if (year >= 2026) return '2026';
-    if (year >= 2025) return '2025';
-    if (year >= 2024) return '2024';
-    if (year >= 2023) return '2023';
-    if (year >= 2022) return '2022';
-    if (year >= 2021) return '2021';
-    return '-2020';
-  }
-  
   function filterPublications() {
     publicationCards.forEach(card => {
-      const cardYear = card.getAttribute('data-year');
       const cardVenue = card.getAttribute('data-venue') || '';
       const cardTitle = card.getAttribute('data-title') || '';
       const cardAuthors = card.getAttribute('data-authors') || '';
-      
-      // Year filter
-      let yearMatch = true;
-      if (activeFilters.year !== 'all') {
-        if (activeFilters.year === '-2020') {
-          yearMatch = !cardYear || parseInt(cardYear) <= 2020;
-        } else {
-          yearMatch = cardYear === activeFilters.year;
-        }
-      }
       
       // Venue filter
       let venueMatch = true;
@@ -247,7 +225,7 @@
         searchMatch = cardTitle.includes(searchLower) || cardAuthors.includes(searchLower);
       }
       
-      if (yearMatch && venueMatch && searchMatch) {
+      if (venueMatch && searchMatch) {
         card.classList.remove('hidden');
         // Reset and re-observe for animation
         if (!card.classList.contains('visible')) {
@@ -262,6 +240,47 @@
         card.classList.remove('visible');
         observer.unobserve(card);
       }
+    });
+
+    updateYearSections();
+  }
+
+  function updateYearSections() {
+    const visibleYears = new Set(
+      Array.from(publicationCards)
+        .filter(card => !card.classList.contains('hidden'))
+        .map(card => card.getAttribute('data-year'))
+        .filter(Boolean)
+    );
+
+    yearHeaders.forEach(header => {
+      const shouldShow = visibleYears.has(header.getAttribute('data-year'));
+      header.classList.toggle('hidden', !shouldShow);
+
+      if (shouldShow) {
+        observer.observe(header);
+      } else {
+        header.classList.remove('visible');
+        observer.unobserve(header);
+      }
+    });
+
+    const firstVisibleYear = Array.from(yearHeaders)
+      .map(header => header.getAttribute('data-year'))
+      .find(year => visibleYears.has(year));
+
+    yearDividers.forEach(divider => {
+      const year = divider.getAttribute('data-year');
+      const shouldShow = visibleYears.has(year) && year !== firstVisibleYear;
+      divider.classList.toggle('hidden', !shouldShow);
+
+      if (shouldShow) {
+        observer.observe(divider);
+      } else {
+        divider.classList.remove('visible');
+        observer.unobserve(divider);
+      }
+
     });
   }
   
@@ -293,6 +312,8 @@
   document.querySelectorAll('.publication-card, .year-header, .year-divider').forEach(el => {
     observer.observe(el);
   });
+
+  filterPublications();
 })();
 </script>
 
