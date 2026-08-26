@@ -83,8 +83,22 @@
   };
 
   const start = () => {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || window.innerWidth <= 900) return;
     clearInterval(timer);
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    if (window.innerWidth <= 600) {
+      timer = setInterval(() => {
+        const next = (current + 1) % cards.length;
+        activate(next);
+        grid.scrollTo({
+          left: cards[next].offsetLeft - (grid.clientWidth - cards[next].offsetWidth) / 2,
+          behavior: 'smooth'
+        });
+      }, 4000);
+      return;
+    }
+
+    if (window.innerWidth <= 900) return;
     timer = setInterval(() => activate((current + 1) % cards.length), 3500);
   };
 
@@ -105,6 +119,7 @@
   grid.addEventListener('mouseenter', () => clearInterval(timer));
   grid.addEventListener('mouseleave', start);
   document.addEventListener('visibilitychange', () => document.hidden ? clearInterval(timer) : start());
+  window.addEventListener('resize', start);
   start();
 })();
 </script>
