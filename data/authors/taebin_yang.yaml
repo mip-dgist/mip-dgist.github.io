@@ -1,17 +1,17 @@
 schema: hugoblox/author/v1
-slug: seungwook_chun
+slug: taebin_yang
+image: taebin_yang.jpg?v=20260831-2137
 category: Interns
-order: 9
+order: 10
 name:
-  display: Seungwook Chun
-  given: Seungwook
-  family: Chun
+  display: Taebin Yang
+  given: Taebin
+  family: Yang
 role: Intern
 # bio: My research interests include Vision-Language-Action(VLA) model and Medical AI.
 tags:
-  - Motion Planning
-  - VLA-based Manipulation
-
+  - Multimodal AI
+  - Vision-Language Model
 links:
   - icon: at-symbol
     url: mailto:yangwj@dgist.ac.kr
