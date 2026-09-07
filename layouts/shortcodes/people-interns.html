@@ -98,9 +98,108 @@
     height: 1.15rem;
   }
 
+  .interns-read-more {
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+  }
+
+  .interns-more-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-top: 1rem !important;
+    padding: 1.15rem 1.5rem;
+    border-radius: 0.5rem;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.12);
+  }
+
+  #interns-more {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  .interns-more-name {
+    font-size: 1.125rem;
+    font-weight: 700;
+  }
+
+  .interns-more-period {
+    color: #4b5563;
+    font-size: 1rem;
+    text-align: right;
+  }
+
+  .dark .interns-more-row {
+    background: #1f2937;
+  }
+
+  .dark .interns-more-period {
+    color: #d1d5db;
+  }
+
+  .interns-read-more-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.25rem;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    color: #2563eb;
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
+  }
+
+  .interns-read-more-button:hover {
+    color: #1d4ed8;
+  }
+
+  .interns-read-more-label {
+    font-size: 0.875rem !important;
+    font-weight: 600 !important;
+    line-height: 1.25rem;
+  }
+
+  .interns-read-more-button:focus-visible {
+    outline: 3px solid rgba(59, 130, 246, 0.35);
+    outline-offset: 3px;
+  }
+
+  .interns-read-more-icon {
+    width: 1rem;
+    height: 1rem;
+    transition: transform 0.2s ease;
+  }
+
+  .interns-read-more-button[aria-expanded="true"] .interns-read-more-icon {
+    transform: rotate(180deg);
+  }
+
+  .dark .interns-read-more-button {
+    color: #93c5fd;
+  }
+
+  .dark .interns-read-more-button:hover {
+    color: #bfdbfe;
+  }
+
   @media (max-width: 767px) {
     .people-photo-frame {
       max-width: 220px;
+    }
+
+    .interns-more-row {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    .interns-more-period {
+      text-align: left;
     }
   }
 </style>
@@ -121,6 +220,7 @@
       </script>
   {{ else }}
   {{ range sort $filtered "order" }}
+    {{ if ne .slug "seungyun_choi" }}
       <div class="people-card h-full bg-white dark:bg-gray-800 rounded-lg shadow-md px-4 pt-0 pb-5">
         <div class="flex h-full flex-col items-center text-center">
           {{ $image := "" }}
@@ -165,9 +265,27 @@
           {{ end }}
         </div>
       </div>
+    {{ end }}
   {{ end }}
   {{ end }}
   </div>
+
+  {{ range sort $filtered "order" }}
+    {{ if eq .slug "seungyun_choi" }}
+      <div class="interns-read-more">
+        <button type="button" class="interns-read-more-button" aria-expanded="false" aria-controls="interns-more">
+          <span class="interns-read-more-label">Read more</span>
+          <svg class="interns-read-more-icon" fill="none" viewBox="0 0 20 20" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 7.5l5 5 5-5"/></svg>
+        </button>
+      </div>
+      <div id="interns-more" hidden>
+        <div class="interns-more-row">
+          <span class="interns-more-name">{{ .name.display }}</span>
+          <span class="interns-more-period">2026 Summer Internship</span>
+        </div>
+      </div>
+    {{ end }}
+  {{ end }}
 </div>
 
 <script>
@@ -189,6 +307,22 @@
   document.querySelectorAll('.people-card').forEach(el => {
     observer.observe(el);
   });
+
+  const toggleButton = document.querySelector('#interns .interns-read-more-button');
+  const morePeople = document.getElementById('interns-more');
+
+  if (toggleButton && morePeople) {
+    toggleButton.addEventListener('click', () => {
+      const isExpanded = toggleButton.getAttribute('aria-expanded') === 'true';
+      toggleButton.setAttribute('aria-expanded', String(!isExpanded));
+      morePeople.hidden = isExpanded;
+      toggleButton.querySelector('.interns-read-more-label').textContent = isExpanded ? 'Read more' : 'Show less';
+
+      if (!isExpanded) {
+        morePeople.querySelectorAll('.people-card').forEach(el => observer.observe(el));
+      }
+    });
+  }
 })();
 </script>
 
