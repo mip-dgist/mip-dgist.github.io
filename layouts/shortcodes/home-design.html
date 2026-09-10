@@ -54,10 +54,11 @@
               <h3>{{ if .home_title_en }}<span>{{ .home_title_en }}</span><span lang="ko">{{ .home_title_ko }}</span>{{ else }}{{ .home_title | default .title }}{{ end }}</h3>
               <time datetime="{{ .date }}">{{ (time .date).Format "January 2, 2006" }}</time>
             </div>
-            <p>{{ .home_description | default .description | plainify }}</p>
+            {{ $description := .home_description | default .description | plainify }}
+            <p{{ if strings.Contains $description "\n" }} class="mip-news-description-multiline"{{ end }}>{{ $description }}</p>
             <span class="mip-news-tag">{{ .type | title }}</span>
           </div>
-          {{ with .thumbnail }}<div class="mip-news-media{{ if eq . "/media/news/collage_2026_08.png" }} mip-news-media-collage{{ end }}{{ if eq . "/media/news/colm-2026.png" }} mip-news-media-colm{{ end }}{{ if eq . "/news/goose-challenge-2026/icra_challenge2.jpg" }} mip-news-media-icra{{ end }}"><img src="{{ . | relURL }}{{ if eq . "/media/news/collage_2026_08.png" }}?v=20260826{{ end }}" alt="" loading="lazy" decoding="async"></div>{{ end }}
+          {{ with .thumbnail }}<div class="mip-news-media{{ if eq . "/media/news/collage_2026_08.png" }} mip-news-media-collage{{ end }}{{ if eq . "/media/news/colm-2026.png" }} mip-news-media-colm{{ end }}{{ if eq . "/news/goose-challenge-2026/icra_challenge2.jpg" }} mip-news-media-icra{{ end }}"><img src="{{ . | relURL }}{{ if eq . "/media/news/collage_2026_08.png" }}?v=20260826{{ else if eq . "/media/news/starfellowship-2026.png" }}?v={{ readFile "static/media/news/starfellowship-2026.png" | sha256 }}{{ end }}" alt="" loading="lazy" decoding="async"></div>{{ end }}
         </article>
       {{ end }}
     </div>
