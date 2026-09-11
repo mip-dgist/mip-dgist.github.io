@@ -223,11 +223,13 @@ body:has(#mip-home) #site-header .navbar-brand img { filter: brightness(0) inver
 .mip-news-card h3 span { display: block; }
 .mip-news-card time { color: var(--muted); font-size: 12px; }
 .mip-news-card p { display: -webkit-box; margin: 12px 0; overflow: hidden; color: #505050; font-size: 14px; line-height: 1.45; -webkit-box-orient: vertical; -webkit-line-clamp: 3; }
+.mip-news-card p.mip-news-description-multiline { display: block; white-space: pre-line; overflow: visible; }
 .mip-news-tag { align-self: flex-start; padding: 6px 12px; border-radius: 999px; background: #f8f8fa; color: var(--ink); font-size: 12px; }
 .mip-news-media { width: 42%; height: 140px; flex: 0 0 42%; align-self: center; display: flex; align-items: center; justify-content: center; overflow: hidden; }
 .mip-news-media img { width: auto; max-width: 100%; height: auto; max-height: 140px; border-radius: 8px; object-fit: contain; }
 .mip-news-media.mip-news-media-collage { height: 180px; aspect-ratio: auto; }
-.mip-news-media.mip-news-media-collage img { width: 100%; height: 100%; max-height: none; object-fit: contain; object-position: center; transform: translateX(4px); }
+.mip-news-media.mip-news-media-collage img { width: 100%; height: 100%; max-height: none; object-fit: contain; object-position: center; transform: translateX(2px); }
+.mip-news-media img[src*="/media/news/starfellowship-2026.png"] { scale: 1.08 1.19; translate: 18px 0; background-color: #fff; filter: brightness(1.03); }
 .mip-news-media.mip-news-media-colm img { transform: translateX(6px) scale(1.12); }
 .mip-news-media.mip-news-media-icra img { transform: translateX(8px) scale(1.08); }
 .mip-news-more { display: flex; justify-content: center; margin-top: 48px; }

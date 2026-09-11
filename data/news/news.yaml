@@ -1,11 +1,12 @@
-# - date: 2026-07-31
-#   type: grant
-#   title: "Selected for the 2026 Star Fellowship for Top-Tier Early-Career Researchers (2026년도 최고급 신진연구자 지원사업, 스타펠로우십)"
-#   description: "The total program budget is KRW 11 billion, with approximately KRW 1.1 billion allocated to MIP Lab.\n\nProject period: 2026 ~ 2031.12.31."
-#   home_title: "Selected for the 2026 Star Fellowship"
-#   home_description: "MIP Lab receives KRW 1.1 billion in research funding for 2026–2031."
-#   thumbnail: "/media/news/starfellowship-2026.png"
-#   home_featured: true
+- date: 2026-09-11
+  type: grant
+  title: "Selected for the 2026 Star Fellowship for Top-Tier Early-Career Researchers (2026년도 최고급 신진연구자 지원사업, 스타펠로우십)"
+  description: "**Total Budget:** KRW 11 billion (approximately KRW 1.1 billion allocated to MIP Lab).\n\n**Project Period:** 2026 ~ 2031.12.31."
+  home_title: "MIP Lab Joins the 2026 AI Star Fellowship"
+  home_description: "A six-year research project focused on autonomous and collaborative Physical AI."
+  thumbnail: "/media/news/starfellowship-2026.png"
+  compact_bottom: true
+  home_featured: true
 
 - date: 2026-08-24
   type: admission

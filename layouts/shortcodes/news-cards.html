@@ -215,6 +215,21 @@
     padding-bottom: 0.25rem !important;
   }
 
+  .news-card:has(.news-thumbnail-starfellowship) {
+    overflow: hidden;
+  }
+
+  .news-card:has(.news-thumbnail-starfellowship) .news-card-meta-row {
+    position: relative;
+    z-index: 1;
+  }
+
+  @media (min-width: 641px) {
+    .news-card:has(.news-thumbnail-starfellowship) .news-card-layout {
+      margin-bottom: -24px;
+    }
+  }
+
   .news-card.news-card-nipa {
     padding-bottom: 0 !important;
     overflow: hidden;
@@ -297,7 +312,7 @@
     object-fit: contain;
     object-position: center;
     background-color: #ffffff;
-    transform: scale(0.95);
+    transform: translateX(-10px) scale(0.95);
     transform-origin: right center;
   }
 
@@ -311,12 +326,15 @@
   }
 
   .news-thumbnail.news-thumbnail-starfellowship {
+    filter: brightness(1.03);
+    scale: 0.95 1;
+    translate: 8px -24px;
     width: 320px;
     height: 240px;
     object-fit: contain;
     object-position: center;
-    background-color: #ffffff;
-    clip-path: none;
+    background-color: transparent;
+    clip-path: inset(32px 0 8px);
     transform: none;
   }
 
@@ -459,7 +477,7 @@
     }
 
     .news-thumbnail.news-thumbnail-collage {
-      transform: scale(0.95) !important;
+      transform: translateX(-10px) scale(0.95) !important;
     }
 
     .news-thumbnail[src$="/eccv-2026.png"] {
@@ -484,7 +502,7 @@
     .news-thumbnail.news-thumbnail-starfellowship {
       width: 100%;
       height: 220px;
-      clip-path: none;
+      clip-path: inset(8px 0);
       transform: none;
     }
 
@@ -569,14 +587,14 @@
         </div>
         <div class="{{ if $item.thumbnail }}news-card-layout{{ if eq $item.thumbnail "/media/news/colm-2026.png" }} news-card-layout-colm{{ end }}{{ else }}news-card-plain{{ end }}">
           {{ with $item.thumbnail }}
-            <img src="{{ . | relURL }}{{ if eq . "/media/news/collage_2026_08.png" }}?v=20260826{{ end }}" alt="{{ $itemTitle }}" class="news-thumbnail{{ if or (eq . "/media/authors/sangjin_lee.jpg") (eq . "/media/news/cvpr-2026.png") }} news-thumbnail-portrait{{ end }}{{ if eq . "/media/news/cvpr-2026.png" }} news-thumbnail-cvpr{{ end }}{{ if eq . "/media/authors/sangjin_lee.jpg" }} news-thumbnail-student{{ end }}{{ if or (eq . "/media/news/colm-2026.png") (eq . "/media/news/eccv-2026.png") (eq . "/media/news/collage_2026_08.png") }} news-thumbnail-natural{{ end }}{{ if eq . "/media/news/collage_2026_08.png" }} news-thumbnail-collage{{ end }}{{ if eq . "/media/news/colm-2026.png" }} news-thumbnail-colm{{ end }}{{ if eq . "/media/news/nipa-2026.png" }} news-thumbnail-nipa{{ end }}{{ if eq . "/media/news/msit-2026.jpg" }} news-thumbnail-msit{{ end }}{{ if eq . "/media/news/starfellowship-2026.png" }} news-thumbnail-starfellowship{{ end }}{{ if eq . "/news/goose-challenge-2026/icra_challenge2.jpg" }} news-thumbnail-icra{{ end }}" loading="lazy" decoding="async">
+            <img src="{{ . | relURL }}{{ if eq . "/media/news/collage_2026_08.png" }}?v=20260826{{ else if eq . "/media/news/starfellowship-2026.png" }}?v={{ readFile "static/media/news/starfellowship-2026.png" | sha256 }}{{ end }}" alt="{{ $itemTitle }}" class="news-thumbnail{{ if or (eq . "/media/authors/sangjin_lee.jpg") (eq . "/media/news/cvpr-2026.png") }} news-thumbnail-portrait{{ end }}{{ if eq . "/media/news/cvpr-2026.png" }} news-thumbnail-cvpr{{ end }}{{ if eq . "/media/authors/sangjin_lee.jpg" }} news-thumbnail-student{{ end }}{{ if or (eq . "/media/news/colm-2026.png") (eq . "/media/news/eccv-2026.png") (eq . "/media/news/collage_2026_08.png") }} news-thumbnail-natural{{ end }}{{ if eq . "/media/news/collage_2026_08.png" }} news-thumbnail-collage{{ end }}{{ if eq . "/media/news/colm-2026.png" }} news-thumbnail-colm{{ end }}{{ if eq . "/media/news/nipa-2026.png" }} news-thumbnail-nipa{{ end }}{{ if eq . "/media/news/msit-2026.jpg" }} news-thumbnail-msit{{ end }}{{ if eq . "/media/news/starfellowship-2026.png" }} news-thumbnail-starfellowship{{ end }}{{ if eq . "/news/goose-challenge-2026/icra_challenge2.jpg" }} news-thumbnail-icra{{ end }}" loading="lazy" decoding="async">
           {{ end }}
           <div class="news-card-content">
             <h3 class="font-semibold mb-2 text-gray-900 dark:text-gray-100" style="font-size: 17px;">{{ $itemTitle }}</h3>
             <div class="news-card-bottom">
               <p class="text-sm text-gray-700 dark:text-gray-300">
                 {{ range split $itemDesc "\n\n" }}
-                  <span class="news-card-description-line">{{ . }}</span>
+                  <span class="news-card-description-line">{{ . | markdownify }}</span>
                 {{ end }}
               </p>
             </div>
