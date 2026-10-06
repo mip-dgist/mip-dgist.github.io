@@ -26,6 +26,6 @@ links:
     url: https://www.linkedin.com/in/woojun-yang-8b29b5280/
     label: LinkedIn
   - icon: academicons/google-scholar
-    url: https://scholar.google.com/citations?user=sarahjohnson
+    disabled: true
     label: Google Scholar
 

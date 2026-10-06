@@ -14,18 +14,17 @@ tags:
   - Self-Driving Laboratories
 links:
   - icon: at-symbol
-    url: mailto:yangwj@dgist.ac.kr
+    url: mailto:hn.choi@dgist.ac.kr
     label: Email
   # - icon: brands/x
   #   url: https://x.com/sarahjohnson
   #   label: X (Twitter)
-  # - icon: brands/github
-  #   url: https://github.com/spacenship
-  #   label: GitHub
-  # - icon: brands/linkedin
-  #   url: https://www.linkedin.com/in/woojun-yang-8b29b5280/
-  #   label: LinkedIn
-  # - icon: academicons/google-scholar
-  #   url: https://scholar.google.com/citations?user=sarahjohnson
-  #   label: Google Scholar
-
+  - icon: brands/github
+    url: https://github.com/jay-onee
+    label: GitHub
+  - icon: brands/linkedin
+    disabled: true
+    label: LinkedIn
+  - icon: academicons/google-scholar
+    disabled: true
+    label: Google Scholar
