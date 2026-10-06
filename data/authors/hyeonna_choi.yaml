@@ -20,11 +20,11 @@ links:
   #   url: https://x.com/sarahjohnson
   #   label: X (Twitter)
   - icon: brands/github
-    url: https://github.com/jay-onee
+    url: https://github.com/hyeonna-choi
     label: GitHub
   - icon: brands/linkedin
-    disabled: true
+    url: https://www.linkedin.com/in/hyeonna-choi-80275a3a0/
     label: LinkedIn
   - icon: academicons/google-scholar
-    disabled: true
+    url: https://scholar.google.com/citations?hl=ko&user=M7nWwIQAAAAJ&view_op=list_works&gmla=AERr9JEos3GxFtqG1jeu7vKSDqoh61gVqeYJgEkIkCAXBj4RyqLbu7rChRYxVx_26fb-K7aBbvHyo3jxVuoCfWT4JEVWKLb1tKA7bGh4BGRFSmWeX3dtBirD0VE59XpFy37afSVByZz-NeOX9iXyzN1p
     label: Google Scholar
