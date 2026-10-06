@@ -26,6 +26,6 @@ links:
     url: https://www.linkedin.com/in/hyobinchoi/
     label: LinkedIn
   - icon: academicons/google-scholar
-    url: https://scholar.google.com/citations?user=sarahjohnson
+    disabled: true
     label: Google Scholar
 

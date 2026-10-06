@@ -14,7 +14,7 @@ tags:
   - Vision-Language-Action(VLA) model
 links:
   - icon: at-symbol
-    url: mailto:sarah.johnson@example.com
+    url: mailto:jaeilpark@dgist.ac.kr
     label: Email
   # - icon: brands/x
   #   url: https://x.com/sarahjohnson
@@ -26,6 +26,6 @@ links:
     url: https://www.linkedin.com/in/jaeil-park-683337408/
     label: LinkedIn
   - icon: academicons/google-scholar
-    url: https://scholar.google.com/citations?user=sarahjohnson
+    url: https://scholar.google.com/citations?user=2I1ii9cAAAAJ&hl=ko
     label: Google Scholar
 

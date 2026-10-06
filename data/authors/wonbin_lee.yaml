@@ -14,7 +14,7 @@ tags:
   # - Generative Models
 links:
   - icon: at-symbol
-    url: mailto:circlehalf17@naver.com
+    url: mailto:wonbin.lee@dgist.ac.kr
     label: Email
   # - icon: brands/x
   #   url: https://x.com/sarahjohnson
@@ -26,6 +26,6 @@ links:
     url: https://www.linkedin.com/in/wonbin-lee-b1703a343/
     label: LinkedIn
   - icon: academicons/google-scholar
-    url: https://scholar.google.com/citations?user=sarahjohnson
+    disabled: true
     label: Google Scholar
 
