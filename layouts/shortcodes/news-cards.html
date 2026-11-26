@@ -355,6 +355,15 @@
     transform: scale(1.1);
   }
 
+  .news-card-layout > .news-thumbnail[src$="/npj-digital-medicine.png"] {
+    width: 100%;
+    max-width: 16rem;
+    height: auto;
+    justify-self: center;
+    align-self: center;
+    transform: none;
+  }
+
   .news-thumbnail[src$="/eccv-2026.png"] {
     width: 300px;
     height: 155px;
@@ -594,7 +603,7 @@
             <div class="news-card-bottom">
               <p class="text-sm text-gray-700 dark:text-gray-300">
                 {{ range split $itemDesc "\n\n" }}
-                  <span class="news-card-description-line">{{ . | markdownify }}</span>
+                  <span class="news-card-description-line">{{ replace (. | markdownify) "(Impact Factor: 18.0)" `<span class="news-impact-factor">(Impact Factor: 18.0)</span>` | safeHTML }}</span>
                 {{ end }}
               </p>
             </div>
