@@ -1,3 +1,19 @@
+- slug: fairness-training-ophthalmic-disease
+  title: "Applications of Fairness Training in Artificial Intelligence to Ophthalmic Disease Diagnosis using External Eye Photographs"
+  authors:
+  - Vasil Kostin*
+  - Sung-Hoon Yoon*
+  - Jimmy S Chen*
+  - Seungjoo Baek
+  - Jesse Seid
+  - Nathan Ouyang
+  - Edward Li
+  - Eric Li
+  - Min Shi
+  - Mengyu Wang
+  venue: npj Digital Medicine
+  date: 2026-11-26
+
 - slug: deltavelocity-2026
   title: "TrailBlazer: History-Guided Reinforcement Learning for Black-Box LLM Jailbreaking"
   authors:

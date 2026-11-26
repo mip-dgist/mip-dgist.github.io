@@ -51,7 +51,7 @@
         <article class="mip-news-card">
           <div class="mip-news-copy">
             <div>
-              <h3>{{ if .home_title_en }}<span>{{ .home_title_en }}</span><span lang="ko">{{ .home_title_ko }}</span>{{ else }}{{ .home_title | default .title }}{{ end }}</h3>
+              <h3>{{ if .home_title_en }}<span>{{ .home_title_en }}</span><span lang="ko">{{ .home_title_ko }}</span>{{ else }}{{ replace (.home_title | default .title | htmlEscape) "(Impact Factor: 18.0)" `<span class="news-impact-factor">(Impact Factor: 18.0)</span>` | safeHTML }}{{ end }}</h3>
               <time datetime="{{ .date }}">{{ (time .date).Format "January 2, 2006" }}</time>
             </div>
             {{ $description := .home_description | default .description | plainify }}
